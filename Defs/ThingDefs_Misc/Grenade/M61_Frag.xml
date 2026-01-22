@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="CGF1_MWP_Grenade">
+		<defName>CGF1_MWP_M61_Frag_</defName>
+		<label>M61 Frag Grenade</label>
+		<description>A fragmentation grenade that is an upgrade of the M26.</description>
+		<graphicData>
+			<texPath>CGF1/Gun/M61_Frag</texPath>
+			<drawSize>0.75</drawSize>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>1.3</uiIconScale>
+		<recipeMaker>
+			<recipeUsers>
+				<li>CGF1_MWP_Building_Gunsmith</li>
+			</recipeUsers>
+			<researchPrerequisite>CGF1_MWP_Research_T9_SpaceAgeFirearms</researchPrerequisite>
+		</recipeMaker>
+		<tickerType>Normal</tickerType>
+		<techLevel>Industrial</techLevel>
+		<soundInteract>Interact_Grenade</soundInteract>
+		<costList>
+			<Steel>20</Steel>
+			<Chemfuel>80</Chemfuel>
+		</costList>
+		<statBases>
+			<WorkToMake>12000</WorkToMake>
+			<Mass>1</Mass>
+			<RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+		</statBases>
+		<weaponTags>
+			<li>CGF1_Grenade_Military</li>
+			<li>CGF1_Grenade_Military_Advanced</li>
+		</weaponTags>
+		<tradeTags>
+			<li>CGF1_GunsGalore_ColdWarUSA</li>
+			<li>CGF1_GunsGalore_ColdWarUSA_Grenade</li>
+		</tradeTags>
+		<thingCategories>
+			<li>Grenades</li>
+		</thingCategories>
+		<verbs>
+			<li>
+				<label>throw frag grenade</label>
+				<verbClass>Verb_LaunchProjectile</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CGF1_MWP_Projectile_M61_Frag</defaultProjectile>
+				<range>12.9</range>
+				<warmupTime>1.5</warmupTime>
+				<noiseRadius>4</noiseRadius>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<forcedMissRadius>1.9</forcedMissRadius>
+				<soundCast>CGF1_MWP_SFX_Grenade_Throw</soundCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>2.66</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+			</li>
+		</comps>
+		<generateCommonality>0.5</generateCommonality> <!-- Abundant -->
+		<thingSetMakerTags>
+			<li>CGF1_GunsGalore_RewardAncient_Common</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	<ThingDef>
+		<defName>CGF1_MWP_Projectile_M61_Frag</defName>
+		<label>M61 Frag Grenade</label>
+		<category>Projectile</category>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<tickerType>Normal</tickerType>
+		<useHitPoints>False</useHitPoints>
+		<neverMultiSelect>True</neverMultiSelect>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+		  <texPath>CGF1/Projectile/M61_Frag</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>Transparent</shaderType>
+		  <drawSize>0.6</drawSize>
+		</graphicData>
+		<projectile>
+		  <explosionRadius>1.9</explosionRadius>
+		  <damageDef>Bomb</damageDef>
+		  <explosionDelay>100</explosionDelay>
+		  <speed>12</speed>
+		  <arcHeightFactor>2</arcHeightFactor>
+		  <shadowSize>0.4</shadowSize>
+		</projectile>
+  </ThingDef>
+	
+	
+</Defs>

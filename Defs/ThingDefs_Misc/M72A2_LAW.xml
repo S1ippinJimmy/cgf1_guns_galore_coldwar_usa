@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="CGF1_MWP_ATLauncher_Disposable_T1">
+		<defName>CGF1_MWP_M72A2_LAW_</defName>
+		<label>M72A2 LAW</label>
+		<description>Caliber: 66mm LAW. 1-round tube. Single Use.
+		
+A portable one-shot unguided anti-tank weapon. Produced beginning in 1963, the LAW was an effective replacement for both the rifle grenades and bazookas used in the anti-tank role up until that point. The M72 is extremely cost effective to produce and very portable, making it a popular platform even in the present.\nThis is the M72A2 variant, which features an improved rocket motor and higher penetration.</description>
+		<graphicData>
+			<texPath>CGF1/Gun/M72A2_LAW</texPath>
+			<drawSize>1.00</drawSize>
+		</graphicData>
+		<thingClass>VEF.Graphics.ThingWithFloorGraphic</thingClass>
+		<tickerType>Normal</tickerType>
+		<recipeMaker>
+			<recipeUsers>
+				<li>CGF1_MWP_Building_Gunsmith</li>
+			</recipeUsers>
+			<researchPrerequisite>CGF1_MWP_Research_T9_SpaceAgeFirearms</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Steel>55</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<WorkToMake>22500</WorkToMake>
+			<Mass>2.5</Mass>
+			<RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		<weaponTags>
+			<li>CGF1_Launcher_Military</li>
+			<li>CGF1_Launcher_Military_Advanced</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>RangedHeavy</li>
+		</weaponClasses>
+		<tradeTags>
+			<li>CGF1_GunsGalore_ColdWarUSA</li>
+			<li>CGF1_GunsGalore_ColdWarUSA_Launcher</li>
+		</tradeTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_ShootOneUse</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CGF1_MWP_Bullet_66mm_M72A2LAW</defaultProjectile>
+				<forcedMissRadius>2.9</forcedMissRadius>
+				<warmupTime>4</warmupTime>
+				<ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+				<range>30.9</range>
+				<soundCast>CGF1_MWP_SFX_Launcher_LAW</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<onlyManualCast>true</onlyManualCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<muzzleFlashScale>14</muzzleFlashScale>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>3.9</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+			</li>
+		</comps>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>11.7</power>
+				<cooldownTime>2.6</cooldownTime>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+				<def>MF_StandardMuzzleFalsh</def>
+				<drawSize>(1.2,1.2)</drawSize>
+				<offsets>
+					<li>(0.55,0.0)</li>
+				</offsets>
+			</li>
+			<li Class="VEF.Graphics.FloorGraphicExtension">
+				<graphicData>
+					<texPath>CGF1/Gun/M72A2_LAW_Folded</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>1.02</drawSize>
+				</graphicData>
+			</li>
+		</modExtensions>
+		<generateCommonality>0.20</generateCommonality> <!-- Common -->
+		<possessionCount>1</possessionCount> <!-- Possession -->
+		<thingSetMakerTags>
+			<li>CGF1_GunsGalore_RewardAncient_Heavy</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+</Defs>

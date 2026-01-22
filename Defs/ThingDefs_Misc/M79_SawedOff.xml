@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="CGF1_MWP_GrenadeLauncher_T2">
+		<defName>CGF1_MWP_M79_SawedOff</defName>
+		<label>M79 Sawed-Off</label>
+		<description>Caliber: 40x46mm. 1-round chamber. Single-Shot.</description>
+		<graphicData>
+			<texPath>CGF1/Gun/M79_SawedOff</texPath>
+			<drawSize>0.95</drawSize>
+		</graphicData>
+		<recipeMaker>
+			<recipeUsers>
+				<li>CGF1_MWP_Building_Gunsmith</li>
+			</recipeUsers>
+			<researchPrerequisite>CGF1_MWP_Research_T8_AtomicAgeFirearms</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Steel>45</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		<statBases>
+			<WorkToMake>10000</WorkToMake>
+			<Mass>2.5</Mass>
+			<RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+		</statBases>
+		<weaponTags>
+			<li>CGF1_GL_Military</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>RangedHeavy</li>
+		</weaponClasses>
+		<tradeTags>
+			<li>CGF1_GunsGalore_ColdWarUSA</li>
+			<li>CGF1_GunsGalore_ColdWarUSA_Launcher</li>
+		</tradeTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+				<warmupTime>3.2</warmupTime>
+				<range>30.9</range>
+				<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<onlyManualCast>true</onlyManualCast>
+				<muzzleFlashScale>14</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<forcedMissRadius>1.9</forcedMissRadius>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<generateCommonality>0.10</generateCommonality> <!-- Average -->
+		<possessionCount>1</possessionCount> <!-- Possession -->
+	</ThingDef>
+	
+</Defs>

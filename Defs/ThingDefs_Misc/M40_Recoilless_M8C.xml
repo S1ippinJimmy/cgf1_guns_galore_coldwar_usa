@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="CGF1_MWP_MountedLauncher_Dismounted_T1">
+		<defName>CGF1_MWP_M40_Recoilless_M8C_</defName>
+		<label>M40 Recoilless M8C</label>
+		<description>Caliber: 105x607mmR M40. 1-round tube. Single-Shot.</description>
+		<graphicData>
+			<texPath>CGF1/Gun/M40_Recoilless_M8C</texPath>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<recipeMaker>
+			<recipeUsers>
+				<li>CGF1_MWP_Building_Gunsmith</li>
+			</recipeUsers>
+			<researchPrerequisite>CGF1_MWP_Research_T8_AtomicAgeFirearms</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<CGF1_MWP_M40_Recoilless_>1</CGF1_MWP_M40_Recoilless_>
+			<CGF1_MWP_M8C_SpottingRifle_>1</CGF1_MWP_M8C_SpottingRifle_>
+		</costList>
+		<statBases>
+			<WorkToMake>50000</WorkToMake>
+			<Mass>75.5</Mass>
+			<AccuracyTouch>1.00</AccuracyTouch>
+			<AccuracyShort>1.00</AccuracyShort>
+			<AccuracyMedium>1.00</AccuracyMedium>
+			<AccuracyLong>1.00</AccuracyLong>
+			<RangedWeapon_Cooldown>12</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.35</MoveSpeed>
+		</equippedStatOffsets>
+		<weaponTags>
+			<li>CGF1_MountedGun_Military</li>
+			
+			<li>CGF1_Weapon_Mech_Pikeman</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>RangedHeavy</li>
+		</weaponClasses>
+		<tradeTags>
+			<li>CGF1_GunsGalore_ColdWarUK_Turret</li>
+		</tradeTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CGF1_MWP_Shell_105mm_M40_</defaultProjectile>
+				<forcedMissRadius>0.01</forcedMissRadius>
+				<warmupTime>5</warmupTime>
+				<ai_AvoidFriendlyFireRadius>1.9</ai_AvoidFriendlyFireRadius>
+				<range>44.9</range>
+				<soundCast>CGF1_MWP_SFX_Autocannon1</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<onlyManualCast>true</onlyManualCast>
+				<targetParams>
+					<canTargetBuildings>true</canTargetBuildings>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<muzzleFlashScale>18</muzzleFlashScale>
+				<label>M40 Recoilless</label>
+				<commandIcon>CGF1/Gun/M40_Recoilless_M8C</commandIcon>
+			</li>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CGF1_MWP_Bullet_127x77mm_Sniper</defaultProjectile>
+				<warmupTime>3</warmupTime>
+				<range>44.9</range>
+				<soundCast>CGF1_MWP_SFX_MG_Light4</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<onlyManualCast>true</onlyManualCast>
+				<label>M8C Spotting Rifle</label>
+				<commandIcon>CGF1/Gun/M8C_SpottingRifle</commandIcon>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>11.7</power>
+				<cooldownTime>2.6</cooldownTime>
+			</li>
+		</tools>
+		<modExtensions>
+			<li MayRequire="VanillaExpanded.VWEHW" Class="VEF.Weapons.HeavyWeapon">
+				<weaponHitPointsDeductionOnShot>0</weaponHitPointsDeductionOnShot>
+				<isHeavy>true</isHeavy>
+				<supportedArmors>
+					<li>VWE_Apparel_Exoframe</li>
+				</supportedArmors>
+				<supportedTraits>
+					<li>Tough</li>
+				</supportedTraits>
+				<disableOptionLabelKey>VWE.CannotEquipHeavy</disableOptionLabelKey>
+			</li>
+		</modExtensions>
+		<comps>
+			<li Class="MVCF.Comps.CompProperties_VerbProps">
+				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
+				<verbProps>
+					<li>
+						<label>M40 Recoilless</label>
+						<canBeToggled>true</canBeToggled>
+						<separateToggle>false</separateToggle>
+					</li>
+					<li>
+						<label>M8C Spotting Rifle</label>
+						<canBeToggled>true</canBeToggled>
+						<separateToggle>false</separateToggle>
+						<description>Caliber: 12.7x77mm. 5-round detachable mag. Semi-Automatic.					
+A .50 caliber (12.7x77mm) semi-automatic spotting rifle that was designed to be use with recoilless rifles, and is ballistically matched to the M40 Recoilless Rifle.</description>
+					</li>
+				</verbProps>
+			</li>
+		</comps>
+		<generateCommonality>0.10</generateCommonality> <!-- Average -->
+	</ThingDef>
+	
+</Defs>

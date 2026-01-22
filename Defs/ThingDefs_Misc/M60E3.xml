@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="CGF1_MWP_GPMG_T1">
+		<defName>CGF1_MWP_M60E3_</defName>
+		<label>M60E3</label>
+		<description>Caliber: 7.62x51mm NATO. 100-round bullet link. Select-Fire.
+		
+The M60 is an American belt-fed general purpose machine gun (GPMG) designed in the 1950s. It was conceived as part of an effort to replace both the M1918 BAR (which was fairly lightweight and portable, but had a very small magazine capacity) and the Browning M1919A6 (which fed from high capacity belts, but was extremely heavy and bulky) with a universal machine gun that shed the disadvantages of both platforms. Mechanically, the M60 was highly inspired by the German MG-42 and FG-42, and it bares a strong physical resemblance to both weapons. The M60 became an iconic weapon during the Vietnam War, where it earned the nickname "the Pig."
+
+The M60E3 is an updated variant of the M60 that was designed to fix issues with the base weapon in infantry service. First fielded in the 1980s, the M60E3 is notable for having an integrated foregrip, ambidextrous safety, and a lightweight barrel. However, the new barrels on the M60E3 had a reputation for rapidly overheating, and the system as a whole was found to be less durable than its predecessor. Consequently, the M60E3 was mostly replaced by the M240 machine gun during the 1990s.</description>
+		<graphicData>
+			<texPath>CGF1/Gun/M60E3</texPath>
+			<drawSize>1.15</drawSize>
+		</graphicData>
+		<recipeMaker>
+			<recipeUsers>
+				<li>CGF1_MWP_Building_Gunsmith</li>
+			</recipeUsers>
+			<researchPrerequisite>CGF1_MWP_Research_T9_SpaceAgeFirearms</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Steel>85</Steel>
+			<ComponentIndustrial>7</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<WorkToMake>50000</WorkToMake>
+			<Mass>12.5</Mass>
+			<AccuracyTouch>0.40</AccuracyTouch>
+			<AccuracyShort>0.60</AccuracyShort>
+			<AccuracyMedium>0.60</AccuracyMedium>
+			<AccuracyLong>0.50</AccuracyLong>
+			<RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		<weaponTags>
+			<li>CGF1_LMG_Military_Advanced</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>RangedHeavy</li>
+		</weaponClasses>
+		<tradeTags>
+			<li>CGF1_GunsGalore_ColdWarUSA</li>
+			<li>CGF1_GunsGalore_ColdWarUSA_LMG</li>
+		</tradeTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CGF1_MWP_Bullet_762x51mmNATO_Auto</defaultProjectile>
+				<warmupTime>2.4</warmupTime>
+				<range>36.9</range>
+				<burstShotCount>8</burstShotCount>
+				<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+				<soundCast>CGF1_MWP_SFX_MG_Medium2</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>11</power>
+				<cooldownTime>2.6</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2.6</cooldownTime>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+				<def>MF_StandardMuzzleFalshThree</def>
+				<drawSize>(0.9,0.9)</drawSize>
+				<offsets>
+					<li>(0.70,0.05)</li>
+				</offsets>
+			</li>
+		</modExtensions>
+		<generateCommonality>0.10</generateCommonality> <!-- Average -->
+		<thingSetMakerTags>
+			<li>CGF1_GunsGalore_RewardAncient_Common</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+</Defs>

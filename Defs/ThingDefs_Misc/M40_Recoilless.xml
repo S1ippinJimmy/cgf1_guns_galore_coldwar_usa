@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="CGF1_MWP_MountedLauncher_Dismounted_T1">
+		<defName>CGF1_MWP_M40_Recoilless_</defName>
+		<label>M40 Recoilless</label>
+		<description>Caliber: 105x607mmR M40. 1-round tube. Single-Shot.</description>
+		<graphicData>
+			<texPath>CGF1/Gun/M40_Recoilless</texPath>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<recipeMaker>
+			<recipeUsers>
+				<li>CGF1_MWP_Building_Gunsmith</li>
+			</recipeUsers>
+			<researchPrerequisite>CGF1_MWP_Research_T8_AtomicAgeFirearms</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Steel>130</Steel>
+			<ComponentIndustrial>8</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<WorkToMake>50000</WorkToMake>
+			<Mass>70.5</Mass>
+			<AccuracyTouch>1.00</AccuracyTouch>
+			<AccuracyShort>1.00</AccuracyShort>
+			<AccuracyMedium>1.00</AccuracyMedium>
+			<AccuracyLong>1.00</AccuracyLong>
+			<RangedWeapon_Cooldown>12</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.35</MoveSpeed>
+		</equippedStatOffsets>
+		<weaponTags>
+			<li>CGF1_MountedGun_Military</li>
+			
+			<li>CGF1_Weapon_Mech_Pikeman</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>RangedHeavy</li>
+		</weaponClasses>
+		<tradeTags>
+			<li>CGF1_GunsGalore_ColdWarUK_Turret</li>
+		</tradeTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CGF1_MWP_Shell_105mm_M40_</defaultProjectile>
+				<forcedMissRadius>0.01</forcedMissRadius>
+				<warmupTime>5</warmupTime>
+				<ai_AvoidFriendlyFireRadius>1.9</ai_AvoidFriendlyFireRadius>
+				<range>44.9</range>
+				<soundCast>CGF1_MWP_SFX_Autocannon1</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<onlyManualCast>true</onlyManualCast>
+				<targetParams>
+					<canTargetBuildings>true</canTargetBuildings>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<muzzleFlashScale>18</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>11.7</power>
+				<cooldownTime>2.6</cooldownTime>
+			</li>
+		</tools>
+		<modExtensions>
+			<li MayRequire="VanillaExpanded.VWEHW" Class="VEF.Weapons.HeavyWeapon">
+				<weaponHitPointsDeductionOnShot>0</weaponHitPointsDeductionOnShot>
+				<isHeavy>true</isHeavy>
+				<supportedArmors>
+					<li>VWE_Apparel_Exoframe</li>
+				</supportedArmors>
+				<supportedTraits>
+					<li>Tough</li>
+				</supportedTraits>
+				<disableOptionLabelKey>VWE.CannotEquipHeavy</disableOptionLabelKey>
+			</li>
+		</modExtensions>
+		<generateCommonality>0.10</generateCommonality> <!-- Average -->
+		<thingSetMakerTags>
+			<li>CGF1_GunsGalore_RewardAncient_Manned</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+</Defs>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="CGF1_MWP_SemiBattleRifle_T1">
+		<defName>CGF1_MWP_M14_ANPVS2_</defName>
+		<label>M14 (AN/PVS-2)</label>
+		<description>Caliber: 7.62x51mm NATO. 20-round detachable mag. Semi-Automatic.
+		
+An American gas-operated battle rifle descended from the M1 Garand. Desiring a universal platform that could replace the capabilities of the Garand (an infantry rifle), the BAR (a squad support weapon), and the Grease Gun (a close quarters combat weapon) in a single weapon, without any of the perceived drawbacks or limitations of such weapons, the Army began a series of trials. Modified M1 Garands were among the weapons submitted and tested, as was the FN FAL, but the resulting M14 rifle was controversially accepted and adopted in 1957, with issue beginning in 1959. However, the M14 would be replaced only a few short years later by Eugene Stoner's AR-15 design in the M16; nonetheless, M14s and its many derivatives would continue to be employed even 60 years after its adoption, ironically in the marksman/sniper role that it was not originally intended for.\nFeaturing an AN/PVS-2 "starlight" night vision scope.</description>
+		<graphicData>
+			<texPath>CGF1/Gun/M14_ANPVS2</texPath>
+			<drawSize>1.05</drawSize>
+		</graphicData>
+		<recipeMaker>
+			<recipeUsers>
+				<li>CGF1_MWP_Building_Gunsmith</li>
+			</recipeUsers>
+			<researchPrerequisite>CGF1_MWP_Research_T8_AtomicAgeFirearms</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Steel>75</Steel>
+			<ComponentIndustrial>10</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<WorkToMake>45000</WorkToMake>
+			<Mass>4.7</Mass>
+			<AccuracyTouch>0.55</AccuracyTouch>
+			<AccuracyShort>0.65</AccuracyShort>
+			<AccuracyMedium>0.75</AccuracyMedium>
+			<AccuracyLong>0.60</AccuracyLong>
+			<RangedWeapon_Cooldown>1.1</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		<weaponTags>
+			<li>CGF1_Rifle_Marksman</li>
+			<li>CGF1_Rifle_Marksman_Advanced</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>LongShots</li>
+			<li>RangedHeavy</li>
+		</weaponClasses>
+		<tradeTags>
+			<li>CGF1_GunsGalore_ColdWarUSA</li>
+			<li>CGF1_GunsGalore_ColdWarUSA_BR</li>
+		</tradeTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CGF1_MWP_Bullet_762x51mmNATO_Rifle</defaultProjectile>
+				<warmupTime>1.8</warmupTime>
+				<range>39.9</range>
+				<soundCast>CGF1_MWP_SFX_Rifle_Semi2</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+				<def>MF_StandardMuzzleFalshThree</def>
+				<drawSize>(0.8,0.8)</drawSize>
+				<offsets>
+					<li>(0.7,0.06)</li>
+				</offsets>
+			</li>
+		</modExtensions>
+		<generateCommonality>0.05</generateCommonality> <!-- Uncommon -->
+	</ThingDef>
+</Defs>

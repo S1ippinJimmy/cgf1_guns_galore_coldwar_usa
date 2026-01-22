@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>CGF1_MWP_Turret_M102_Howitzer_</defName>
+    <label>M102 Howitzer</label>
+    <description>A stationary, manned 105mm howitzer.</description>
+    <thingClass>Building_TurretGun</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>CGF1/Building/M102_Base</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(4.5,4.5)</drawSize>
+      <damageData>
+        <rect>(0.38,0.2,0.56375,0.8)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.27,0.25,0.27)</volume>
+        <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <techLevel>Industrial</techLevel>
+    <uiIconPath>CGF1/Building/M102_Howitzer/M102_MenuIcon</uiIconPath>
+    <uiIconScale>1.1</uiIconScale>
+	<size>(2,3)</size>
+	<minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <stealable>false</stealable>
+    <rotatable>true</rotatable>
+	<tickerType>Normal</tickerType>
+	<thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <costList>
+      <Steel>180</Steel>
+      <ComponentIndustrial>9</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <WorkToBuild>10000</WorkToBuild>
+	  <Mass>100</Mass>
+      <Beauty>-20</Beauty>
+      <ShootingAccuracyTurret>0.97</ShootingAccuracyTurret>
+    </statBases>
+    <comps>
+	  <li Class="CompProperties_Explosive">
+        <explosiveRadius>5.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+      </li>
+      <li Class="CompProperties_Mannable">
+        <manWorkType>Violent</manWorkType>
+      </li>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Breakdownable" />
+	  <li MayRequire="VanillaExpanded.VFESecurity" Class="VFESecurity.CompProperties_LongRangeArtillery">
+        <worldTileRange>20</worldTileRange>
+        <maxForcedMissRadiusFactor>2.5</maxForcedMissRadiusFactor>
+        <gizmoIconTexPath>Things/Building/Artillery/TurretArtillery_Top</gizmoIconTexPath>
+      </li>
+    </comps>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <passability>PassThroughOnly</passability>
+    <pathCost>40</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <designationCategory>CGF1_MWP_Category_GunsGalore</designationCategory>
+	<inspectorTabs>
+      <li>ITab_Shells</li>
+    </inspectorTabs>
+    <building>
+      <turretGunDef>CGF1_MWP_TurretGun_M102_Howitzer_</turretGunDef>
+      <turretBurstCooldownTime>8.5</turretBurstCooldownTime>
+      <turretBurstWarmupTime>8</turretBurstWarmupTime>
+	  <turretTopOffset>(0.0,0.0)</turretTopOffset>
+	  <turretTopDrawSize>4.5</turretTopDrawSize>
+	  <defaultStorageSettings Inherit="False">
+        <filter>
+          <categories>
+            <li>MortarShells</li>
+          </categories>
+          <disallowedThingDefs>
+            <li>Shell_Incendiary</li>
+            <li>Shell_Firefoam</li>
+            <li>Shell_AntigrainWarhead</li>
+          </disallowedThingDefs>
+        </filter>
+      </defaultStorageSettings>
+	  <buildingTags>
+        <li>Artillery</li>
+      </buildingTags>
+    </building>
+    <placeWorkers>
+	  <li>PlaceWorker_NotUnderRoof</li>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+	  <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>CGF1_MWP_Research_T8_AtomicAgeEmplacements</li>
+    </researchPrerequisites>
+	<tradeTags Inherit="False"/>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>CGF1_MWP_TurretGun_M102_Howitzer_</defName>
+    <label>M151 TOW</label>
+    <description>A 105mm M102 howitzer.</description>
+    <graphicData>
+      <texPath>CGF1/Building/M102_Howitzer/M102_Howitzer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <destroyOnDrop>true</destroyOnDrop>
+    <tradeability>None</tradeability>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <RangedWeapon_Cooldown>8.5</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>100</Mass>
+    </statBases>
+    <weaponTags Inherit="false">
+      <li>Artillery_BaseDestroyer</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+		<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+        <hasStandardCommand>true</hasStandardCommand>
+		<forcedMissRadius>18</forcedMissRadius>
+        <warmupTime>8</warmupTime>
+		<minRange>29.9</minRange>
+        <range>500</range>
+		<burstShotCount>1</burstShotCount>
+		<requireLineOfSight>false</requireLineOfSight>
+		<soundCast>CGF1_MWP_SFX_TankCannon1</soundCast>
+		<soundCastTail>GunTail_Heavy</soundCastTail>
+		<muzzleFlashScale>32</muzzleFlashScale>
+		<targetParams>
+			<canTargetLocations>true</canTargetLocations>
+		</targetParams>
+      </li>
+    </verbs>
+	<modExtensions>
+			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+				<def>MF_StandardMuzzleFalsh</def>
+				<drawSize>(2.5,2)</drawSize>
+				<offsets>
+					<li>(1.80,0.0)</li>
+				</offsets>
+			</li>
+	</modExtensions>
+	<comps>
+      <li Class="CompProperties_ChangeableProjectile" />
+    </comps>
+    <building>
+      <fixedStorageSettings>
+        <filter>
+          <categories>
+            <li>MortarShells</li>
+          </categories>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <filter>
+          <categories>
+            <li>MortarShells</li>
+          </categories>
+          <disallowedThingDefs>
+            <li>Shell_Firefoam</li>
+            <li>Shell_AntigrainWarhead</li>
+          </disallowedThingDefs>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+  </ThingDef>
+</Defs>

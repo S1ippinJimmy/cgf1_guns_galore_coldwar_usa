@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="CGF1_MWP_ATLauncher_Disposable_Guided_T1">
+		<defName>CGF1_MWP_M47_Dragon_</defName>
+		<label>M47 Dragon</label>
+		<description>Caliber: 140mm M47. 1-round tube. Single Use.</description>
+		<graphicData>
+			<texPath>CGF1/Gun/M47_Dragon</texPath>
+			<drawSize>1.10</drawSize>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<recipeMaker>
+			<recipeUsers>
+				<li>CGF1_MWP_Building_Gunsmith</li>
+			</recipeUsers>
+			<researchPrerequisite>CGF1_MWP_Research_T9_SpaceAgeFirearms</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Steel>75</Steel>
+			<ComponentIndustrial>6</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<WorkToMake>30000</WorkToMake>
+			<Mass>15</Mass>
+			<RangedWeapon_Cooldown>7</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		<weaponTags>
+			<li>CGF1_Launcher_Military</li>
+			<li>CGF1_Launcher_Military_Advanced</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>RangedHeavy</li>
+		</weaponClasses>
+		<tradeTags>
+			<li>CGF1_GunsGalore_ColdWarUSA</li>
+			<li>CGF1_GunsGalore_ColdWarUSA_Launcher</li>
+		</tradeTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_ShootOneUse</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CGF1_MWP_Bullet_140mm_M47Dragon</defaultProjectile>
+				<forcedMissRadius>2.9</forcedMissRadius>
+				<warmupTime>4.4</warmupTime>
+				<ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+				<range>45.9</range>
+				<soundCast>CGF1_MWP_SFX_Launcher_AA</soundCast>
+				<soundAiming>CGF1_MWP_SFX_Launcher_LockOn</soundAiming>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<onlyManualCast>true</onlyManualCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<muzzleFlashScale>14</muzzleFlashScale>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>3.9</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+			</li>
+		</comps>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>11.7</power>
+				<cooldownTime>2.6</cooldownTime>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+				<def>MF_StandardMuzzleFalsh</def>
+				<drawSize>(1.2,1.2)</drawSize>
+				<offsets>
+					<li>(0.55,0.0)</li>
+				</offsets>
+			</li>
+		</modExtensions>
+		<generateCommonality>0.10</generateCommonality> <!-- Average -->
+		<thingSetMakerTags>
+			<li>CGF1_GunsGalore_RewardAncient_Heavy</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+</Defs>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>CGF1_MWP_Turret_M219_</defName>
+    <label>M219</label>
+    <description>A stationary medium machine gun.</description>
+    <thingClass>Building_TurretGun</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>CGF1/Building/M37_Base</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.27,0.25,0.27)</volume>
+        <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <techLevel>Industrial</techLevel>
+    <uiIconPath>CGF1/Building/M219/M219_MenuIcon</uiIconPath>
+    <uiIconScale>0.90</uiIconScale>
+	<minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <stealable>false</stealable>
+    <rotatable>true</rotatable>
+	<thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <costList>
+      <Steel>25</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+	  <CGF1_MWP_M219_>1</CGF1_MWP_M219_>
+    </costList>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <WorkToBuild>5000</WorkToBuild>
+	  <Mass>26</Mass>
+      <Beauty>-20</Beauty>
+      <ShootingAccuracyTurret>0.97</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Mannable">
+        <manWorkType>Violent</manWorkType>
+      </li>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Breakdownable" />
+    </comps>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <passability>PassThroughOnly</passability>
+    <pathCost>40</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <designationCategory>CGF1_MWP_Category_GunsGalore</designationCategory>
+	<designatorDropdown>CGF1_MWP_Dropdown_M1919</designatorDropdown>
+    <building>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>CGF1_MWP_TurretGun_M219_</turretGunDef>
+      <turretBurstCooldownTime>2.6</turretBurstCooldownTime>
+      <turretBurstWarmupTime>2.4</turretBurstWarmupTime>
+	  <turretTopOffset>(0.01,0.2)</turretTopOffset>
+	  <turretTopDrawSize>1.4</turretTopDrawSize>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>CGF1_MWP_Research_T8_AtomicAgeEmplacements</li>
+    </researchPrerequisites>
+	<tradeTags>
+			<li>CGF1_GunsGalore_ColdWarUSA_Turret</li>
+		</tradeTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>CGF1_MWP_TurretGun_M219_</defName>
+    <label>M219</label>
+    <description>A mounted variant of the M219 MMG.</description>
+    <graphicData>
+      <texPath>CGF1/Building/M219/M219</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <destroyOnDrop>true</destroyOnDrop>
+    <tradeability>None</tradeability>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <AccuracyTouch>0.40</AccuracyTouch>
+      <AccuracyShort>0.60</AccuracyShort>
+      <AccuracyMedium>0.60</AccuracyMedium>
+      <AccuracyLong>0.50</AccuracyLong>
+      <RangedWeapon_Cooldown>2.6</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>13.5</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <weaponTags Inherit="false">
+      <li>TurretGun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CGF1_MWP_Bullet_762x51mmNATO_Auto</defaultProjectile>
+				<warmupTime>3</warmupTime>
+				<range>36.9</range>
+				<burstShotCount>10</burstShotCount>
+				<ticksBetweenBurstShots>9</ticksBetweenBurstShots>
+				<soundCast>CGF1_MWP_SFX_MG_Light6</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<modExtensions>
+			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+				<def>MF_StandardMuzzleFalsh</def>
+				<drawSize>(1.2,1.2)</drawSize>
+				<offsets>
+					<li>(0.65,0.01)</li>
+				</offsets>
+			</li>
+	</modExtensions>
+  </ThingDef>
+</Defs>

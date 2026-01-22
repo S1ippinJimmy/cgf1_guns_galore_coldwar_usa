@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="CGF1_MWP_MANPADS_T1">
+		<defName>CGF1_MWP_FIM_43A_Redeye_</defName>
+		<label>FIM-43A Redeye</label>
+		<description>Caliber: 70mm FIM-43. 1-round tube. Single-Shot.
+		
+Can only be used against hostile buildings.</description>
+		<graphicData>
+			<texPath>CGF1/Gun/FIM_43A_Redeye</texPath>
+			<drawSize>1.25</drawSize>
+		</graphicData>
+		<recipeMaker>
+			<recipeUsers>
+				<li>CGF1_MWP_Building_Gunsmith</li>
+			</recipeUsers>
+			<researchPrerequisite>CGF1_MWP_Research_T8_AtomicAgeFirearms</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Steel>90</Steel>
+			<ComponentIndustrial>7</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<WorkToMake>50000</WorkToMake>
+			<Mass>8.75</Mass>
+			<RangedWeapon_Cooldown>10.5</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		<weaponTags>
+			<li>CGF1_MANPADS_Military</li>
+			<li>CGF1_MANPADS_Military_Advanced</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>RangedHeavy</li>
+		</weaponClasses>
+		<tradeTags>
+			<li>CGF1_GunsGalore_ColdWarUSA</li>
+			<li>CGF1_GunsGalore_ColdWarUSA_Launcher</li>
+		</tradeTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CGF1_MWP_Bullet_70mm_FIM43_</defaultProjectile>
+				<forcedMissRadius>0.9</forcedMissRadius>
+				<warmupTime>4.4</warmupTime>
+				<ai_AvoidFriendlyFireRadius>0.9</ai_AvoidFriendlyFireRadius>
+				<range>40.9</range>
+				<soundCast>CGF1_MWP_SFX_Launcher_AA</soundCast>
+				<soundAiming>CGF1_MWP_SFX_Launcher_LockOn</soundAiming>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<onlyManualCast>true</onlyManualCast>
+				<targetParams>
+					<canTargetBuildings>true</canTargetBuildings>
+					<canTargetLocations>false</canTargetLocations>
+					<canTargetPawns>false</canTargetPawns>
+					<canTargetAnimals>false</canTargetAnimals>
+					<canTargetHumans>false</canTargetHumans>
+					<canTargetMechs>false</canTargetMechs>
+				</targetParams>
+				<muzzleFlashScale>16</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>11.7</power>
+				<cooldownTime>2.6</cooldownTime>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+				<def>MF_StandardMuzzleFalsh</def>
+				<drawSize>(1.2,1.6)</drawSize>
+				<offsets>
+					<li>(0.55,0.0)</li>
+				</offsets>
+			</li>
+		</modExtensions>
+		<generateCommonality>0.10</generateCommonality> <!-- Average -->
+		<thingSetMakerTags>
+			<li>CGF1_GunsGalore_RewardAncient_Heavy</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+</Defs>

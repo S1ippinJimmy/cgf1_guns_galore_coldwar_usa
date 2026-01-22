@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>CGF1_MWP_Turret_M151_TOW_</defName>
+    <label>M151 TOW</label>
+    <description>A stationary ATGM launcher.</description>
+    <thingClass>Building_TurretGun</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>CGF1/Building/TOW_Base</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.27,0.25,0.27)</volume>
+        <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <techLevel>Industrial</techLevel>
+    <uiIconPath>CGF1/Building/M151_TOW/M151_TOW_MenuIcon</uiIconPath>
+    <uiIconScale>0.90</uiIconScale>
+	<minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <stealable>false</stealable>
+    <rotatable>true</rotatable>
+	<thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <costList>
+      <Steel>30</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <CGF1_MWP_M151_TOW_>1</CGF1_MWP_M151_TOW_>
+    </costList>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <WorkToBuild>10000</WorkToBuild>
+	  <Mass>65</Mass>
+      <Beauty>-20</Beauty>
+      <ShootingAccuracyTurret>0.97</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Mannable">
+        <manWorkType>Violent</manWorkType>
+      </li>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Breakdownable" />
+      <!--<li Class="CompProperties_Refuelable">
+        <fuelLabel>Shots until out of ammo</fuelLabel>
+        <fuelGizmoLabel>Ammo</fuelGizmoLabel>
+        <fuelFilter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </fuelFilter>
+        <fuelCapacity>1</fuelCapacity>
+        <initialFuelPercent>1</initialFuelPercent>
+        <autoRefuelPercent>0.6</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1</minimumFueledThreshold>
+        <fuelMultiplier>0.1</fuelMultiplier>
+        <factorByDifficulty>true</factorByDifficulty>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <outOfFuelMessage>Cannot shoot: Out of ammo</outOfFuelMessage>
+        <fuelIconPath>CGF1/UI/Ammo</fuelIconPath>
+      </li>-->
+    </comps>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <passability>PassThroughOnly</passability>
+    <pathCost>40</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <designationCategory>CGF1_MWP_Category_GunsGalore</designationCategory>
+	<designatorDropdown>CGF1_MWP_Dropdown_TOW</designatorDropdown>
+    <building>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>CGF1_MWP_TurretGun_M151_TOW_</turretGunDef>
+      <turretBurstCooldownTime>3</turretBurstCooldownTime>
+      <turretBurstWarmupTime>6</turretBurstWarmupTime>
+	  <turretTopOffset>(0.0,0.0)</turretTopOffset>
+	  <turretTopDrawSize>1.5</turretTopDrawSize>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>CGF1_MWP_Research_T9_SpaceAgeEmplacements</li>
+    </researchPrerequisites>
+	<tradeTags>
+			<li>CGF1_GunsGalore_ColdWarUSA_Turret</li>
+		</tradeTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>CGF1_MWP_TurretGun_M151_TOW_</defName>
+    <label>M151 TOW</label>
+    <description>An M151 TOW 120mm ATGM launcher.</description>
+    <graphicData>
+      <texPath>CGF1/Building/M151_TOW/M151_TOW</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <destroyOnDrop>true</destroyOnDrop>
+    <tradeability>None</tradeability>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <AccuracyTouch>0.22</AccuracyTouch>
+      <AccuracyShort>0.33</AccuracyShort>
+      <AccuracyMedium>0.44</AccuracyMedium>
+      <AccuracyLong>0.95</AccuracyLong>
+      <RangedWeapon_Cooldown>3.2</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>70</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <weaponTags Inherit="false">
+      <li>TurretGun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>CGF1_MWP_Bullet_152mm_BGM71A_TOW</defaultProjectile>
+		<forcedMissRadius>0.01</forcedMissRadius>
+        <warmupTime>3</warmupTime>
+		<minRange>11.9</minRange>
+        <range>50.9</range>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+		<burstShotCount>1</burstShotCount>
+		<soundCast>CGF1_MWP_SFX_Launcher_AA</soundCast>
+		<soundCastTail>GunTail_Heavy</soundCastTail>
+		<muzzleFlashScale>18</muzzleFlashScale>
+		<targetParams>
+			<canTargetBuildings>true</canTargetBuildings>
+			<canTargetLocations>true</canTargetLocations>
+		</targetParams>
+        <!--<consumeFuelPerShot>1</consumeFuelPerShot>-->
+      </li>
+    </verbs>
+	<modExtensions>
+			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+				<def>MF_StandardMuzzleFalsh</def>
+				<drawSize>(1.5,1.5)</drawSize>
+				<offsets>
+					<li>(0.80,0.0)</li>
+				</offsets>
+			</li>
+	</modExtensions>
+  </ThingDef>
+</Defs>
