@@ -36,8 +36,6 @@
 			<li>CGF1_AR_Civilian</li>
 			<li>CGF1_AR_Military</li>
 			<li>CGF1_AR_Military_Advanced</li>
-			
-			<li>CGF1_FG_CWUSA_Soldier_Delta_Operator</li>
 		</weaponTags>
 		<tradeTags>
 			<li>CGF1_GunsGalore_ColdWarUSA</li>
@@ -122,8 +120,6 @@
 		<weaponTags>
 			<li>CGF1_AR_Military</li>
 			<li>CGF1_AR_Military_SpecOps</li>
-			
-			<li>CGF1_FG_CWUSA_Soldier_Delta_Operator</li>
 		</weaponTags>
 		<tradeTags Inherit="False">
 			<li>CGF1_GunsGalore_NoSpawn</li>
