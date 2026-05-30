@@ -98,7 +98,7 @@
 				<def>MF_StandardMuzzleFalshThree</def>
 				<drawSize>(0.6,0.6)</drawSize>
 				<offsets>
-					<li>(0.65,0.05)</li>
+					<li>(0.65,0.06)</li>
 				</offsets>
 			</li>
 		</modExtensions>
@@ -121,7 +121,7 @@ The M203 is a single shot grenade launcher that was designed to be mounted to va
 				</verbProps>
 			</li>
 		</comps>
-		<generateCommonality>0.20</generateCommonality> <!-- Common -->
+		<generateCommonality>0.5</generateCommonality> <!-- Abundant -->
 		<thingSetMakerTags>
 			<li>CGF1_GunsGalore_RewardAncient_Common</li>
 		</thingSetMakerTags>

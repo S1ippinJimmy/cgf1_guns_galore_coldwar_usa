@@ -7,7 +7,7 @@
 		<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.</description>
 		<graphicData>
 			<texPath>CGF1/Gun/Colt_Model723GS</texPath>
-			<drawSize>1.00</drawSize>
+			<drawSize>1.07</drawSize>
 		</graphicData>
 		<recipeMaker>
 			<recipeUsers>
@@ -92,7 +92,7 @@
 		<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.</description>
 		<graphicData>
 			<texPath>CGF1/Gun/UP/Colt_Model723GS_SD</texPath>
-			<drawSize>1.20</drawSize>
+			<drawSize>1.07</drawSize>
 		</graphicData>
 		<recipeMaker>
 			<recipeUsers>

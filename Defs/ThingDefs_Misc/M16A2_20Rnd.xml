@@ -79,11 +79,11 @@
 				<def>MF_StandardMuzzleFalshThree</def>
 				<drawSize>(0.6,0.6)</drawSize>
 				<offsets>
-					<li>(0.65,0.05)</li>
+					<li>(0.65,0.06)</li>
 				</offsets>
 			</li>
 		</modExtensions>
-		<generateCommonality>0.0125</generateCommonality> <!-- Rare -->
+		<generateCommonality>0.05</generateCommonality> <!-- Uncommon -->
 	</ThingDef>
 	
 </Defs>

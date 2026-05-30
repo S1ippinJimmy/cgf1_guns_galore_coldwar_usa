@@ -7,7 +7,7 @@
 		<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.</description>
 		<graphicData>
 			<texPath>CGF1/Gun/Colt_Model727</texPath>
-			<drawSize>1.00</drawSize>
+			<drawSize>1.07</drawSize>
 		</graphicData>
 		<recipeMaker>
 			<recipeUsers>

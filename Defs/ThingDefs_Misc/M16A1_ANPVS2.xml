@@ -19,7 +19,7 @@
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Steel>60</Steel>
+			<Steel>70</Steel>
 			<ComponentIndustrial>10</ComponentIndustrial>
 		</costList>
 		<statBases>
@@ -78,7 +78,7 @@
 				<def>MF_StandardMuzzleFalshThree</def>
 				<drawSize>(0.6,0.6)</drawSize>
 				<offsets>
-					<li>(0.65,0.05)</li>
+					<li>(0.65,0.06)</li>
 				</offsets>
 			</li>
 		</modExtensions>

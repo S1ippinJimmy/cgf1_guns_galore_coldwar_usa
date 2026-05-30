@@ -7,7 +7,7 @@
 		<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.</description>
 		<graphicData>
 			<texPath>CGF1/Gun/Colt_Model733_FL</texPath>
-			<drawSize>1.00</drawSize>
+			<drawSize>1.07</drawSize>
 		</graphicData>
 		<recipeMaker>
 			<recipeUsers>
@@ -79,7 +79,7 @@
 				<def>MF_StandardMuzzleFalshThree</def>
 				<drawSize>(0.6,0.6)</drawSize>
 				<offsets>
-					<li>(0.60,0.05)</li>
+					<li>(0.55,0.05)</li>
 				</offsets>
 			</li>
 		</modExtensions>
