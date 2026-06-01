@@ -84,6 +84,7 @@
 			</li>
 		</modExtensions>
 		<generateCommonality>0.10</generateCommonality> <!-- Average -->
+		<possessionCount>1</possessionCount> <!-- Possession -->
 	</ThingDef>
 	
 	<ThingDef ParentName="CGF1_MWP_PumpShotgun_T1">

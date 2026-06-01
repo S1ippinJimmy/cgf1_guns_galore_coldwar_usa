@@ -66,6 +66,7 @@
 			</li>
 		</comps>
 		<generateCommonality>0.5</generateCommonality> <!-- Abundant -->
+		<possessionCount>1</possessionCount> <!-- Possession -->
 	</ThingDef>
 	<ThingDef>
 		<defName>CGF1_MWP_Projectile_M26_Frag</defName>

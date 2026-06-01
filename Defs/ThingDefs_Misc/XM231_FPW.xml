@@ -2,11 +2,11 @@
 <Defs>
 
 	<ThingDef ParentName="CGF1_MWP_AssaultRifle_Carbine_T0">
-		<defName>CGF1_MWP_M231_FPW_</defName>
-		<label>M231 FPW</label>
+		<defName>CGF1_MWP_XM231_FPW_</defName>
+		<label>XM231 FPW</label>
 		<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.</description>
 		<graphicData>
-			<texPath>CGF1/Gun/M231_FPW</texPath>
+			<texPath>CGF1/Gun/XM231_FPW</texPath>
 			<drawSize>1.1</drawSize>
 		</graphicData>
 		<recipeMaker>
@@ -24,7 +24,7 @@
 		</costList>
 		<statBases>
 			<WorkToMake>40000</WorkToMake>
-			<Mass>3.33</Mass>
+			<Mass>3.4</Mass>
 			<AccuracyTouch>0.85</AccuracyTouch>
 			<AccuracyShort>0.70</AccuracyShort>
 			<AccuracyMedium>0.35</AccuracyMedium>
@@ -81,10 +81,9 @@
 				</offsets>
 			</li>
 		</modExtensions>
-		<generateCommonality>0.05</generateCommonality> <!-- Uncommon -->
-		<possessionCount>1</possessionCount> <!-- Possession -->
+		<generateCommonality>0.0125</generateCommonality> <!-- Rare -->
 		<thingSetMakerTags>
-			<li>CGF1_GunsGalore_RewardAncient_Common</li>
+			<li>CGF1_GunsGalore_RewardAncient_Prototype</li>
 		</thingSetMakerTags>
 	</ThingDef>
 	

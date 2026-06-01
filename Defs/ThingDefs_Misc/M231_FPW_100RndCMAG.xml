@@ -2,11 +2,11 @@
 <Defs>
 
 	<ThingDef ParentName="CGF1_MWP_AssaultRifle_Carbine_T0">
-		<defName>CGF1_MWP_M231_FPW_</defName>
-		<label>M231 FPW</label>
-		<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.</description>
+		<defName>CGF1_MWP_M231_FPW_100RndCMAG</defName>
+		<label>M231 FPW (100Rnd CMAG)</label>
+		<description>Caliber: 5.56x45mm NATO. 100-round detachable mag. Select-Fire.</description>
 		<graphicData>
-			<texPath>CGF1/Gun/M231_FPW</texPath>
+			<texPath>CGF1/Gun/M231_FPW_100RndCMAG</texPath>
 			<drawSize>1.1</drawSize>
 		</graphicData>
 		<recipeMaker>
@@ -19,12 +19,12 @@
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Steel>50</Steel>
-			<ComponentIndustrial>6</ComponentIndustrial>
+			<Steel>55</Steel>
+			<ComponentIndustrial>8</ComponentIndustrial>
 		</costList>
 		<statBases>
-			<WorkToMake>40000</WorkToMake>
-			<Mass>3.33</Mass>
+			<WorkToMake>45000</WorkToMake>
+			<Mass>3.73</Mass>
 			<AccuracyTouch>0.85</AccuracyTouch>
 			<AccuracyShort>0.70</AccuracyShort>
 			<AccuracyMedium>0.35</AccuracyMedium>
@@ -46,7 +46,7 @@
 				<defaultProjectile>CGF1_MWP_Bullet_556x45mmNATO_Auto</defaultProjectile>
 				<warmupTime>0.9</warmupTime>
 				<range>30.9</range>
-				<burstShotCount>4</burstShotCount>
+				<burstShotCount>6</burstShotCount>
 				<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
 				<soundCast>CGF1_MWP_SFX_Rifle_Auto11</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
@@ -81,11 +81,7 @@
 				</offsets>
 			</li>
 		</modExtensions>
-		<generateCommonality>0.05</generateCommonality> <!-- Uncommon -->
-		<possessionCount>1</possessionCount> <!-- Possession -->
-		<thingSetMakerTags>
-			<li>CGF1_GunsGalore_RewardAncient_Common</li>
-		</thingSetMakerTags>
+		<generateCommonality>0.0125</generateCommonality> <!-- Rare -->
 	</ThingDef>
 	
 </Defs>

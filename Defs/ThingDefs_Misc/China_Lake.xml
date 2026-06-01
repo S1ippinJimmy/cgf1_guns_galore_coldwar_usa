@@ -4,7 +4,9 @@
 	<ThingDef ParentName="CGF1_MWP_GrenadeLauncher_T2_PumpAction">
 		<defName>CGF1_MWP_China_Lake_</defName>
 		<label>China Lake</label>
-		<description>Caliber: 40x46mm. 3-round tube. Pump-Action.</description>
+		<description>Caliber: 40x46mm. 3-round tube. Pump-Action.
+		
+The "China Lake" is a rare, pump-action grenade launcher developed in 1967 to provide Navy SEALs with devastating, rapid firepower in the jungles of Vietnam. While pop culture frequently slaps it with erroneous labels like "EX-41" or "NATIC," the weapon was built on an ad hoc basis and never received an official military designation; "China Lake" was actually the California naval facility where it was designed. Borrowing heavily from the mechanics of a Remington 870 shotgun, its tubular magazine allowed a single operator to rapidly cycle up to four 40mm grenades before reloading. Only about two dozen of these experimental launchers were ever hand-built, making it an exceptionally scarce and legendary piece of special operations history.</description>
 		<graphicData>
 			<texPath>CGF1/Gun/China_Lake</texPath>
 			<drawSize>1.00</drawSize>

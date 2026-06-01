@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef ParentName="CGF1_MWP_AssaultRifle_Carbine_T0">
-		<defName>CGF1_MWP_M231_FPW_</defName>
-		<label>M231 FPW</label>
-		<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.</description>
+	<ThingDef ParentName="CGF1_MWP_SMG_T1">
+		<defName>CGF1_MWP_Colt_Model633_SMG_20Rnd_</defName>
+		<label>Colt Model 633 SMG (20Rnd)</label>
+		<description>Caliber: 9x19mm Parabellum. 20-round detachable mag. Select-Fire.</description>
 		<graphicData>
-			<texPath>CGF1/Gun/M231_FPW</texPath>
-			<drawSize>1.1</drawSize>
+			<texPath>CGF1/Gun/Colt_Model633_SMG_20Rnd</texPath>
+			<drawSize>1.09</drawSize>
 		</graphicData>
 		<recipeMaker>
 			<recipeUsers>
@@ -15,41 +15,47 @@
 			</recipeUsers>
 			<researchPrerequisite>CGF1_MWP_Research_T9_SpaceAgeFirearms</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>6</Crafting>
+				<Crafting>5</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Steel>50</Steel>
-			<ComponentIndustrial>6</ComponentIndustrial>
+			<Steel>60</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
 		</costList>
 		<statBases>
-			<WorkToMake>40000</WorkToMake>
-			<Mass>3.33</Mass>
+			<WorkToMake>25000</WorkToMake>
+			<Mass>2.9</Mass>
 			<AccuracyTouch>0.85</AccuracyTouch>
-			<AccuracyShort>0.70</AccuracyShort>
+			<AccuracyShort>0.65</AccuracyShort>
 			<AccuracyMedium>0.35</AccuracyMedium>
 			<AccuracyLong>0.20</AccuracyLong>
-			<RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>1.65</RangedWeapon_Cooldown>
 		</statBases>
 		<equippedAngleOffset>40</equippedAngleOffset>
 		<weaponTags>
-			<li>CGF1_AR_Military</li>
+			<li>CGF1_SMG_Civilian</li>
+			<li>CGF1_SMG_Military</li>
+			<li>CGF1_SMG_Military_Advanced</li>
 		</weaponTags>
+		<weaponClasses>
+			<li>ShortShots</li>
+			<li>RangedLight</li>
+		</weaponClasses>
 		<tradeTags>
 			<li>CGF1_GunsGalore_ColdWarUSA</li>
-			<li>CGF1_GunsGalore_ColdWarUSA_AR</li>
+			<li>CGF1_GunsGalore_ColdWarUSA_SMG</li>
 		</tradeTags>
 		<verbs>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>CGF1_MWP_Bullet_556x45mmNATO_Auto</defaultProjectile>
+				<defaultProjectile>CGF1_MWP_Bullet_9x19mmParabellum_Pistol</defaultProjectile>
 				<warmupTime>0.9</warmupTime>
-				<range>30.9</range>
-				<burstShotCount>4</burstShotCount>
-				<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
-				<soundCast>CGF1_MWP_SFX_Rifle_Auto11</soundCast>
-				<soundCastTail>GunTail_Medium</soundCastTail>
+				<range>25.9</range>
+				<burstShotCount>5</burstShotCount>
+				<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+				<soundCast>CGF1_MWP_SFX_Pistol1</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
 			</li>
 		</verbs>
@@ -74,18 +80,14 @@
 		</tools>
 		<modExtensions>
 			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
-				<def>MF_StandardMuzzleFalshThree</def>
-				<drawSize>(0.6,0.6)</drawSize>
+				<def>MF_StandardMuzzleFalsh</def>
+				<drawSize>(0.7,0.7)</drawSize>
 				<offsets>
-					<li>(0.63,0.05)</li>
+					<li>(0.37,0.05)</li>
 				</offsets>
 			</li>
 		</modExtensions>
-		<generateCommonality>0.05</generateCommonality> <!-- Uncommon -->
-		<possessionCount>1</possessionCount> <!-- Possession -->
-		<thingSetMakerTags>
-			<li>CGF1_GunsGalore_RewardAncient_Common</li>
-		</thingSetMakerTags>
+		<generateCommonality>0.10</generateCommonality> <!-- Average -->
 	</ThingDef>
-	
+
 </Defs>

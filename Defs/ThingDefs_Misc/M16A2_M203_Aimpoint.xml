@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef ParentName="CGF1_MWP_AssaultRifle_T1">
-		<defName>CGF1_MWP_M16_NWCTriple40mm_</defName>
-		<label>M16 NWC Triple 40mm</label>
-		<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.</description>
+	<ThingDef ParentName="CGF1_MWP_AssaultRifle_T0">
+		<defName>CGF1_MWP_M16A2_M203_Aimpoint_</defName>
+		<label>M16A2 M203 (Aimpoint)</label>
+		<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.</description>
 		<graphicData>
-			<texPath>CGF1/Gun/M16_NWCTriple40mm</texPath>
+			<texPath>CGF1/Gun/M16A2_M203_Aimpoint</texPath>
 			<drawSize>1.03</drawSize>
 		</graphicData>
 		<recipeMaker>
 			<recipeUsers>
 				<li>CGF1_MWP_Building_Gunsmith</li>
 			</recipeUsers>
-			<researchPrerequisite>CGF1_MWP_Research_T8_AtomicAgeFirearms</researchPrerequisite>
+			<researchPrerequisite>CGF1_MWP_Research_T9_SpaceAgeFirearms</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Steel>70</Steel>
+			<Steel>75</Steel>
 			<ComponentIndustrial>10</ComponentIndustrial>
 		</costList>
 		<statBases>
 			<WorkToMake>55000</WorkToMake>
-			<Mass>5.0</Mass>
+			<Mass>4.15</Mass>
 			<AccuracyTouch>0.60</AccuracyTouch>
-			<AccuracyShort>0.60</AccuracyShort>
-			<AccuracyMedium>0.55</AccuracyMedium>
-			<AccuracyLong>0.50</AccuracyLong>
+			<AccuracyShort>0.70</AccuracyShort>
+			<AccuracyMedium>0.65</AccuracyMedium>
+			<AccuracyLong>0.55</AccuracyLong>
 			<RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
 		</statBases>
 		<equippedAngleOffset>40</equippedAngleOffset>
@@ -45,34 +45,33 @@
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>CGF1_MWP_Bullet_556x45mmNATO_Auto</defaultProjectile>
-				<warmupTime>1</warmupTime>
+				<warmupTime>0.95</warmupTime>
 				<range>30.9</range>
-				<burstShotCount>4</burstShotCount>
-				<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
 				<soundCast>CGF1_MWP_SFX_Rifle_Auto12</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
-				<label>M16</label>
-				<commandIcon>CGF1/Gun/M16_NWCTriple40mm</commandIcon>
+				<label>M16A2</label>
+				<commandIcon>CGF1/Gun/M16A2_M203_Aimpoint</commandIcon>
 			</li>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
-				<warmupTime>4</warmupTime>
-				<range>18.9</range>
-				<forcedMissRadius>2.9</forcedMissRadius>
-				<burstShotCount>3</burstShotCount>
-				<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
-				<soundCast>CGF1_MWP_SFX_GrenadeLauncher2</soundCast>
+				<warmupTime>3.5</warmupTime>
+				<range>20.9</range>
+				<forcedMissRadius>1.9</forcedMissRadius>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
 				<soundCastTail>GunTail_Light</soundCastTail>
 				<muzzleFlashScale>2</muzzleFlashScale>
 				<targetParams>
 					<canTargetLocations>true</canTargetLocations>
 				</targetParams>
 				<onlyManualCast>true</onlyManualCast>
-				<label>Triple 40mm</label>
-				<commandIcon>CGF1/Underbarrel/NWC_40mm_Triple</commandIcon>
+				<label>M203</label>
+				<commandIcon>CGF1/Underbarrel/M203</commandIcon>
 			</li>
 		</verbs>
 		<tools>
@@ -108,24 +107,22 @@
 				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
 				<verbProps>
 					<li>
-						<label>M16</label>
+						<label>M16A2</label>
 						<canBeToggled>true</canBeToggled>
 						<separateToggle>false</separateToggle>
 					</li>
 					<li>
-						<label>Triple 40mm</label>
+						<label>M203</label>
 						<canBeToggled>true</canBeToggled>
 						<separateToggle>false</separateToggle>
-						<description>Caliber: 40x46mm. 3-round module. Triple barrel.
-The "Triple 40mm" was an experimental underbarrel grenade launcher developed by the Naval Weapons Center (NWC) at China Lake for use with the M16 platform during the Vietnam War. Unlike the better-known China Lake pump-action grenade launcher, this design used three short 40mm barrels mounted together beneath the rifle, giving the operator three immediate shots without needing to reload after each round. Only a handful of prototypes were produced, and at least some were reportedly tested by special operations units in Vietnam. Although compact in concept, the launcher was wide, heavy, awkwardly balanced, and vulnerable to mud and debris entering the exposed barrels. It was not adopted, and the simpler M203 became the dominant underbarrel grenade launcher for the M16.</description>
+						<description>Caliber: 40x46mm. 1-round tube. Single shot.					
+The M203 is a single shot grenade launcher that was designed to be mounted to various rifles (although standalone variants exist.) First created in the late 1960s, versions made specifically for earlier rifles (such as the M16 and Diemaco C7) were adapted with special handguards, as the M203 attached directly to the barrel on two points. Later versions (dubbed "M203A2") made in the 2000s were adapted to fit on the railed handguards used by contemporary rifles, needing only one point of attachment to the rifle's barrel.</description>
 					</li>
 				</verbProps>
 			</li>
 		</comps>
-		<generateCommonality>0.0125</generateCommonality> <!-- Rare -->
-		<thingSetMakerTags>
-			<li>CGF1_GunsGalore_RewardAncient_Prototype</li>
-		</thingSetMakerTags>
+		<generateCommonality>0.05</generateCommonality> <!-- Uncommon -->
 	</ThingDef>
+	
 	
 </Defs>
