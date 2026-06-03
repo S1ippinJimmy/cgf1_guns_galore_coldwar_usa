@@ -13,7 +13,7 @@
 			<recipeUsers>
 				<li>CGF1_MWP_Building_Gunsmith</li>
 			</recipeUsers>
-			<researchPrerequisite>CGF1_MWP_Research_T8_AtomicAgeFirearms</researchPrerequisite>
+			<researchPrerequisite>CGF1_MWP_Research_T9_SpaceAgeFirearms</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>

@@ -1,41 +1,40 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef ParentName="CGF1_MWP_AssaultRifle_T0">
-		<defName>CGF1_MWP_M16A3_</defName>
-		<label>M16A3</label>
-		<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.</description>
+	<ThingDef ParentName="CGF1_MWP_LMG_MagFed_T1">
+		<defName>CGF1_MWP_Colt_Model606_HBAR_M2_</defName>
+		<label>Colt Model 606 HBAR M2</label>
+		<description>Caliber: 5.56x45mm NATO. 120-round bullet link. Select-Fire.</description>
 		<graphicData>
-			<texPath>CGF1/Gun/M16A2</texPath>
+			<texPath>CGF1/Gun/Colt_Model606_HBAR_M2</texPath>
 			<drawSize>1.03</drawSize>
 		</graphicData>
 		<recipeMaker>
 			<recipeUsers>
 				<li>CGF1_MWP_Building_Gunsmith</li>
 			</recipeUsers>
-			<researchPrerequisite>CGF1_MWP_Research_T9_SpaceAgeFirearms</researchPrerequisite>
+			<researchPrerequisite>CGF1_MWP_Research_T8_AtomicAgeFirearms</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Steel>60</Steel>
+			<Steel>80</Steel>
 			<ComponentIndustrial>7</ComponentIndustrial>
 		</costList>
 		<statBases>
-			<WorkToMake>40000</WorkToMake>
-			<Mass>3.65</Mass>
-			<AccuracyTouch>0.60</AccuracyTouch>
-			<AccuracyShort>0.70</AccuracyShort>
-			<AccuracyMedium>0.65</AccuracyMedium>
-			<AccuracyLong>0.55</AccuracyLong>
-			<RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
+			<WorkToMake>50000</WorkToMake>
+			<Mass>7</Mass>
+			<AccuracyTouch>0.50</AccuracyTouch>
+			<AccuracyShort>0.65</AccuracyShort>
+			<AccuracyMedium>0.60</AccuracyMedium>
+			<AccuracyLong>0.50</AccuracyLong>
+			<RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
 		</statBases>
 		<equippedAngleOffset>40</equippedAngleOffset>
 		<weaponTags>
-			<li>CGF1_AR_Civilian</li>
-			<li>CGF1_AR_Military</li>
-			<li>CGF1_AR_Military_Advanced</li>
+			<li>CGF1_LMG_Military</li>
+			<li>CGF1_LMG_Military_Advanced</li>
 		</weaponTags>
 		<tradeTags>
 			<li>CGF1_GunsGalore_ColdWarUSA</li>
@@ -46,9 +45,9 @@
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>CGF1_MWP_Bullet_556x45mmNATO_Auto</defaultProjectile>
-				<warmupTime>1</warmupTime>
+				<warmupTime>1.8</warmupTime>
 				<range>30.9</range>
-				<burstShotCount>4</burstShotCount>
+				<burstShotCount>8</burstShotCount>
 				<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
 				<soundCast>CGF1_MWP_SFX_Rifle_Auto12</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
@@ -79,15 +78,11 @@
 				<def>MF_StandardMuzzleFalshThree</def>
 				<drawSize>(0.6,0.6)</drawSize>
 				<offsets>
-					<li>(0.65,0.06)</li>
+					<li>(0.6,0.05)</li>
 				</offsets>
 			</li>
 		</modExtensions>
 		<generateCommonality>0.05</generateCommonality> <!-- Uncommon -->
-		<thingSetMakerTags>
-			<li>CGF1_GunsGalore_RewardAncient_Common</li>
-		</thingSetMakerTags>
 	</ThingDef>
-	
 	
 </Defs>

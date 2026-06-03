@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef ParentName="CGF1_MWP_AssaultRifle_T0">
-		<defName>CGF1_MWP_M16A3_</defName>
-		<label>M16A3</label>
-		<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.</description>
+	<ThingDef ParentName="CGF1_MWP_AssaultRifle_T1">
+		<defName>CGF1_MWP_Colt_Model656_Irons_</defName>
+		<label>Colt Model 656 (Irons)</label>
+		<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.</description>
 		<graphicData>
-			<texPath>CGF1/Gun/M16A2</texPath>
+			<texPath>CGF1/Gun/Colt_Model656_Irons</texPath>
 			<drawSize>1.03</drawSize>
 		</graphicData>
 		<recipeMaker>
 			<recipeUsers>
 				<li>CGF1_MWP_Building_Gunsmith</li>
 			</recipeUsers>
-			<researchPrerequisite>CGF1_MWP_Research_T9_SpaceAgeFirearms</researchPrerequisite>
+			<researchPrerequisite>CGF1_MWP_Research_T8_AtomicAgeFirearms</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
@@ -24,16 +24,15 @@
 		</costList>
 		<statBases>
 			<WorkToMake>40000</WorkToMake>
-			<Mass>3.65</Mass>
+			<Mass>3.55</Mass>
 			<AccuracyTouch>0.60</AccuracyTouch>
-			<AccuracyShort>0.70</AccuracyShort>
-			<AccuracyMedium>0.65</AccuracyMedium>
-			<AccuracyLong>0.55</AccuracyLong>
+			<AccuracyShort>0.60</AccuracyShort>
+			<AccuracyMedium>0.55</AccuracyMedium>
+			<AccuracyLong>0.50</AccuracyLong>
 			<RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
 		</statBases>
 		<equippedAngleOffset>40</equippedAngleOffset>
 		<weaponTags>
-			<li>CGF1_AR_Civilian</li>
 			<li>CGF1_AR_Military</li>
 			<li>CGF1_AR_Military_Advanced</li>
 		</weaponTags>
@@ -83,11 +82,7 @@
 				</offsets>
 			</li>
 		</modExtensions>
-		<generateCommonality>0.05</generateCommonality> <!-- Uncommon -->
-		<thingSetMakerTags>
-			<li>CGF1_GunsGalore_RewardAncient_Common</li>
-		</thingSetMakerTags>
+		<generateCommonality>0.0125</generateCommonality> <!-- Rare -->
 	</ThingDef>
-	
 	
 </Defs>

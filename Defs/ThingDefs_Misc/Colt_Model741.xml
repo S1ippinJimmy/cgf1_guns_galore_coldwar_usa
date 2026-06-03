@@ -2,11 +2,11 @@
 <Defs>
 
 	<ThingDef ParentName="CGF1_MWP_AssaultRifle_T0">
-		<defName>CGF1_MWP_M16A3_</defName>
-		<label>M16A3</label>
+		<defName>CGF1_MWP_Colt_Model741_</defName>
+		<label>Colt Model 741</label>
 		<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.</description>
 		<graphicData>
-			<texPath>CGF1/Gun/M16A2</texPath>
+			<texPath>CGF1/Gun/Colt_Model741</texPath>
 			<drawSize>1.03</drawSize>
 		</graphicData>
 		<recipeMaker>
@@ -24,7 +24,7 @@
 		</costList>
 		<statBases>
 			<WorkToMake>40000</WorkToMake>
-			<Mass>3.65</Mass>
+			<Mass>3.95</Mass>
 			<AccuracyTouch>0.60</AccuracyTouch>
 			<AccuracyShort>0.70</AccuracyShort>
 			<AccuracyMedium>0.65</AccuracyMedium>
@@ -85,7 +85,7 @@
 		</modExtensions>
 		<generateCommonality>0.05</generateCommonality> <!-- Uncommon -->
 		<thingSetMakerTags>
-			<li>CGF1_GunsGalore_RewardAncient_Common</li>
+			<li>CGF1_GunsGalore_RewardAncient_Prototype</li>
 		</thingSetMakerTags>
 	</ThingDef>
 	

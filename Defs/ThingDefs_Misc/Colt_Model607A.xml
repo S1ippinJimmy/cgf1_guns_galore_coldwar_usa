@@ -85,6 +85,9 @@ The Colt Model 607 was the first dedicated carbine variant of the M16, designed 
 			</li>
 		</modExtensions>
 		<generateCommonality>0.05</generateCommonality> <!-- Uncommon -->
+		<thingSetMakerTags>
+			<li>CGF1_GunsGalore_RewardAncient_Common</li>
+		</thingSetMakerTags>
 	</ThingDef>
 	
 	

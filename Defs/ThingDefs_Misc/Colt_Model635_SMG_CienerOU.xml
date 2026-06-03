@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef ParentName="CGF1_MWP_AssaultRifle_Carbine_T1">
-		<defName>CGF1_MWP_XM177E2_Masterkey_</defName>
-		<label>XM177E2 Masterkey</label>
-		<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.</description>
+	<ThingDef ParentName="CGF1_MWP_SMG_T1">
+		<defName>CGF1_MWP_Colt_Model635_SMG_CienerOU_</defName>
+		<label>Colt Model 635 SMG Ciener O/U</label>
+		<description>Caliber: 9x19mm Parabellum. 32-round detachable mag. Select-Fire.</description>
 		<graphicData>
-			<texPath>CGF1/Gun/XM177E2_Masterkey</texPath>
+			<texPath>CGF1/Gun/Colt_Model635_SMG_CienerOU</texPath>
 			<drawSize>1.07</drawSize>
 		</graphicData>
 		<recipeMaker>
@@ -15,45 +15,49 @@
 			</recipeUsers>
 			<researchPrerequisite>CGF1_MWP_Research_T9_SpaceAgeFirearms</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>6</Crafting>
+				<Crafting>5</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Steel>60</Steel>
-			<ComponentIndustrial>9</ComponentIndustrial>
+			<Steel>70</Steel>
+			<ComponentIndustrial>6</ComponentIndustrial>
 		</costList>
 		<statBases>
-			<WorkToMake>50000</WorkToMake>
-			<Mass>5.75</Mass>
-			<AccuracyTouch>0.65</AccuracyTouch>
-			<AccuracyShort>0.60</AccuracyShort>
-			<AccuracyMedium>0.55</AccuracyMedium>
-			<AccuracyLong>0.45</AccuracyLong>
-			<RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
+			<WorkToMake>35000</WorkToMake>
+			<Mass>6.05</Mass>
+			<AccuracyTouch>0.85</AccuracyTouch>
+			<AccuracyShort>0.65</AccuracyShort>
+			<AccuracyMedium>0.35</AccuracyMedium>
+			<AccuracyLong>0.20</AccuracyLong>
+			<RangedWeapon_Cooldown>1.65</RangedWeapon_Cooldown>
 		</statBases>
 		<equippedAngleOffset>40</equippedAngleOffset>
 		<weaponTags>
-			<li>CGF1_AR_Military</li>
-			<li>CGF1_AR_Military_Advanced</li>
+			<li>CGF1_SMG_Military</li>
+			<li>CGF1_SMG_Military_Advanced</li>
 		</weaponTags>
+		<weaponClasses>
+			<li>ShortShots</li>
+			<li>RangedLight</li>
+		</weaponClasses>
 		<tradeTags>
 			<li>CGF1_GunsGalore_ColdWarUSA</li>
-			<li>CGF1_GunsGalore_ColdWarUSA_AR</li>
+			<li>CGF1_GunsGalore_ColdWarUSA_SMG</li>
 		</tradeTags>
 		<verbs>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>CGF1_MWP_Bullet_556x45mmNATO_Auto</defaultProjectile>
+				<defaultProjectile>CGF1_MWP_Bullet_9x19mmParabellum_Pistol</defaultProjectile>
 				<warmupTime>0.9</warmupTime>
-				<range>30.9</range>
-				<burstShotCount>4</burstShotCount>
-				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-				<soundCast>CGF1_MWP_SFX_Rifle_Auto11</soundCast>
-				<soundCastTail>GunTail_Medium</soundCastTail>
+				<range>25.9</range>
+				<burstShotCount>5</burstShotCount>
+				<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+				<soundCast>CGF1_MWP_SFX_Pistol1</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
-				<label>XM177E2</label>
-				<commandIcon>CGF1/Gun/XM177E2_Masterkey</commandIcon>
+				<label>M635</label>
+				<commandIcon>CGF1/Gun/Colt_Model635_SMG_CienerOU</commandIcon>
 			</li>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
@@ -61,11 +65,11 @@
 				<defaultProjectile>CGF1_MWP_Bullet_12Gauge_Slug_Shotgun</defaultProjectile>
 				<warmupTime>1</warmupTime>
 				<range>12.9</range>
-				<soundCast>CGF1_MWP_SFX_Shotgun_Auto1</soundCast>
+				<soundCast>CGF1_MWP_SFX_Shotgun1</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
-				<label>KAC Masterkey</label>
-				<commandIcon>CGF1/Underbarrel/Masterkey</commandIcon>
+				<label>Ciener O/U</label>
+				<commandIcon>CGF1/Underbarrel/CienerUltimate_OU</commandIcon>
 			</li>
 		</verbs>
 		<tools>
@@ -90,9 +94,9 @@
 		<modExtensions>
 			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
 				<def>MF_StandardMuzzleFalsh</def>
-				<drawSize>(0.6,0.6)</drawSize>
+				<drawSize>(0.7,0.7)</drawSize>
 				<offsets>
-					<li>(0.48,0.04)</li>
+					<li>(0.31,0.05)</li>
 				</offsets>
 			</li>
 		</modExtensions>
@@ -101,22 +105,21 @@
 				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
 				<verbProps>
 					<li>
-						<label>XM177E2</label>
+						<label>M635</label>
 						<canBeToggled>true</canBeToggled>
 						<separateToggle>false</separateToggle>
 					</li>
 					<li>
-						<label>KAC Masterkey</label>
+						<label>Ciener O/U</label>
 						<canBeToggled>true</canBeToggled>
 						<separateToggle>false</separateToggle>
 						<description>Caliber: 12 Gauge. 3-round tube. Single shot.					
-The Knight's Armament Company (KAC) Masterkey is a cut down Remington 870 shotgun built to attach to the barrel/rail of an M16 or M4 rifle. Primarily designed for breaching doors, the Masterkey was created to replace the need for US infantrymen to carry a separate shotgun used in the same task. Used for many years on an unofficial basis, the Masterkey ultimately lost out to the C-More M26 MASS shotgun and was never adopted, but remains a fairly iconic attachment for the M16 series.</description>
+The Ciener Ultimate Over/Under is a heavily modified Remington 870 shotgun designed to mount beneath an M16 or AR-15 rifle. Developed as a direct rival to the KAC Masterkey, it used a unique mounting system that attached directly to the rifle's bayonet lug and receiver pin, allowing it to sit higher and closer to the host weapon. While it lost military favor to Knight's Armament and was produced in incredibly small numbers, it earned a legendary reputation in the hands of elite tier one operators during the Battle of Mogadishu.</description>
 					</li>
 				</verbProps>
 			</li>
 		</comps>
 		<generateCommonality>0.0125</generateCommonality> <!-- Rare -->
 	</ThingDef>
-	
-	
+
 </Defs>

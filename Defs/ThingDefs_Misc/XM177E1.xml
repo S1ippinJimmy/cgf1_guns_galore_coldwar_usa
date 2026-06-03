@@ -84,6 +84,9 @@
 			</li>
 		</modExtensions>
 		<generateCommonality>0.20</generateCommonality> <!-- Common -->
+		<thingSetMakerTags>
+			<li>CGF1_GunsGalore_RewardAncient_Common</li>
+		</thingSetMakerTags>
 	</ThingDef>
 	
 	<ThingDef ParentName="CGF1_MWP_AssaultRifle_Carbine_T1">

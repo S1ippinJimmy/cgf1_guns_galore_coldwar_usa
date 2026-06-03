@@ -122,9 +122,6 @@ The M203 is a single shot grenade launcher that was designed to be mounted to va
 			</li>
 		</comps>
 		<generateCommonality>0.5</generateCommonality> <!-- Abundant -->
-		<thingSetMakerTags>
-			<li>CGF1_GunsGalore_RewardAncient_Common</li>
-		</thingSetMakerTags>
 	</ThingDef>
 	
 	<ThingDef ParentName="CGF1_MWP_AssaultRifle_T1">

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef ParentName="CGF1_MWP_AssaultRifle_T0">
-		<defName>CGF1_MWP_M16A3_</defName>
-		<label>M16A3</label>
+	<ThingDef ParentName="CGF1_MWP_SMG_T1">
+		<defName>CGF1_MWP_Patriot_</defName>
+		<label>Patriot</label>
 		<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.</description>
 		<graphicData>
-			<texPath>CGF1/Gun/M16A2</texPath>
-			<drawSize>1.03</drawSize>
+			<texPath>CGF1/Gun/Patriot</texPath>
+			<drawSize>1.12</drawSize>
 		</graphicData>
 		<recipeMaker>
 			<recipeUsers>
@@ -19,23 +19,21 @@
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Steel>60</Steel>
-			<ComponentIndustrial>7</ComponentIndustrial>
+			<Steel>65</Steel>
+			<ComponentIndustrial>6</ComponentIndustrial>
 		</costList>
 		<statBases>
-			<WorkToMake>40000</WorkToMake>
-			<Mass>3.65</Mass>
-			<AccuracyTouch>0.60</AccuracyTouch>
-			<AccuracyShort>0.70</AccuracyShort>
-			<AccuracyMedium>0.65</AccuracyMedium>
-			<AccuracyLong>0.55</AccuracyLong>
-			<RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
+			<WorkToMake>45000</WorkToMake>
+			<Mass>3.2</Mass>
+			<AccuracyTouch>0.85</AccuracyTouch>
+			<AccuracyShort>0.65</AccuracyShort>
+			<AccuracyMedium>0.35</AccuracyMedium>
+			<AccuracyLong>0.20</AccuracyLong>
+			<RangedWeapon_Cooldown>1.65</RangedWeapon_Cooldown>
 		</statBases>
 		<equippedAngleOffset>40</equippedAngleOffset>
 		<weaponTags>
-			<li>CGF1_AR_Civilian</li>
 			<li>CGF1_AR_Military</li>
-			<li>CGF1_AR_Military_Advanced</li>
 		</weaponTags>
 		<tradeTags>
 			<li>CGF1_GunsGalore_ColdWarUSA</li>
@@ -46,11 +44,11 @@
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>CGF1_MWP_Bullet_556x45mmNATO_Auto</defaultProjectile>
-				<warmupTime>1</warmupTime>
-				<range>30.9</range>
-				<burstShotCount>4</burstShotCount>
-				<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
-				<soundCast>CGF1_MWP_SFX_Rifle_Auto12</soundCast>
+				<warmupTime>0.9</warmupTime>
+				<range>25.9</range>
+				<burstShotCount>8</burstShotCount>
+				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+				<soundCast>CGF1_MWP_SFX_MG_Light4</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
 			</li>
@@ -79,15 +77,15 @@
 				<def>MF_StandardMuzzleFalshThree</def>
 				<drawSize>(0.6,0.6)</drawSize>
 				<offsets>
-					<li>(0.65,0.06)</li>
+					<li>(0.5,0.05)</li>
 				</offsets>
 			</li>
 		</modExtensions>
-		<generateCommonality>0.05</generateCommonality> <!-- Uncommon -->
+		<generateCommonality>0.0125</generateCommonality> <!-- Rare -->
+		<possessionCount>1</possessionCount> <!-- Possession -->
 		<thingSetMakerTags>
-			<li>CGF1_GunsGalore_RewardAncient_Common</li>
+			<li>CGF1_GunsGalore_RewardAncient_Prototype</li>
 		</thingSetMakerTags>
 	</ThingDef>
-	
 	
 </Defs>
