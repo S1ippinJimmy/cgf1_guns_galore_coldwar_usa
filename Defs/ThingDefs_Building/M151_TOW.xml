@@ -135,7 +135,7 @@
         <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
 		<burstShotCount>1</burstShotCount>
 		<soundCast>CGF1_MWP_SFX_Launcher_AA</soundCast>
-		<soundCastTail>GunTail_Heavy</soundCastTail>
+		<soundCastTail>CGF1_MWP_SFX_Dist_Javelin</soundCastTail>
 		<muzzleFlashScale>18</muzzleFlashScale>
 		<targetParams>
 			<canTargetBuildings>true</canTargetBuildings>

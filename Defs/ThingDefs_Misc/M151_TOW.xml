@@ -56,7 +56,7 @@
 				<range>44.9</range>
 				<soundCast>CGF1_MWP_SFX_Launcher_AA</soundCast>
 				<soundAiming>CGF1_MWP_SFX_Launcher_LockOn</soundAiming>
-				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<soundCastTail>CGF1_MWP_SFX_Dist_Javelin</soundCastTail>
 				<onlyManualCast>true</onlyManualCast>
 				<targetParams>
 					<canTargetBuildings>true</canTargetBuildings>

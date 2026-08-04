@@ -114,7 +114,7 @@
 				<burstShotCount>8</burstShotCount>
 				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
 				<soundCast>CGF1_MWP_SFX_MG_Heavy1</soundCast>
-				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<soundCastTail>CGF1_MWP_SFX_Dist_HMG</soundCastTail>
 				<muzzleFlashScale>14</muzzleFlashScale>
       </li>
     </verbs>
