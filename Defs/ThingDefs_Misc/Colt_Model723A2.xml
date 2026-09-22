@@ -84,5 +84,84 @@
 			</li>
 		</modExtensions>
 		<generateCommonality>0.20</generateCommonality> <!-- Common -->
+		
+		<comps>
+			<li Class="WeaponVariants.CompProperties_WeaponVariants">
+				<generateBaseWeapon>true</generateBaseWeapon>
+				<variants>
+					<li>
+						<defName>CGF1_MWP_Colt_Colt_Model723A2_M203</defName>
+						<label>Colt Model 723A2 M203</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an M203 grenade launcher.</description>
+						<commonality>0.1</commonality> <!-- 1 in 10 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model723A2_M203</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.4</Mass> <!-- M203 -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>M723A2</label>
+								<commandIcon>CGF1/Gun/Variant/Colt_Model723A2_M203</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.5</warmupTime>
+								<range>20.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>M203</label>
+								<commandIcon>CGF1/Underbarrel/M203</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model723A2_Masterkey</defName>
+						<label>Colt Model 723A2 Masterkey</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a KAC Masterkey shotgun.</description>
+						<commonality>0.04</commonality> <!-- 1 in 25 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model723A2_Masterkey</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>2.0</Mass> <!-- KAC Masterkey-->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>M723A2</label>
+								<commandIcon>CGF1/Gun/Variant/Colt_Model723A2_Masterkey</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_12Gauge_Slug_Shotgun</defaultProjectile>
+								<warmupTime>1</warmupTime>
+								<range>12.9</range>
+								<soundCast>CGF1_MWP_SFX_Shotgun_Auto1</soundCast>
+								<soundCastTail>GunTail_Heavy</soundCastTail>
+								<muzzleFlashScale>9</muzzleFlashScale>
+								<label>KAC Masterkey</label>
+								<commandIcon>CGF1/Underbarrel/Masterkey</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+				</variants>
+			</li>
+		</comps>
 	</ThingDef>	
 </Defs>

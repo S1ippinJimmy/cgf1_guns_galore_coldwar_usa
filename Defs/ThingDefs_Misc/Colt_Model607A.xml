@@ -88,6 +88,239 @@ The Colt Model 607 was the first dedicated carbine variant of the M16, designed 
 		<thingSetMakerTags>
 			<li>CGF1_GunsGalore_RewardAncient_Common</li>
 		</thingSetMakerTags>
+		
+		<comps>
+			<li Class="WeaponVariants.CompProperties_WeaponVariants">
+				<generateBaseWeapon>true</generateBaseWeapon>
+				<variants>
+					<li>
+						<defName>CGF1_MWP_Colt_Model607A_Folded</defName>
+						<label>Colt Model 607A (Folded)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant's stock has been folded.</description>
+						<commonality>1</commonality> <!-- 1 in 1 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model607A_Folded</texPath>
+						</graphicData>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model607A_25Rnd</defName>
+						<label>Colt Model 607A (25Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 25-round detachable mag. Select-Fire.\n\nThis variant uses a rare, early 25-round AR-15 test magazine.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model607A_25Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.02</Mass> <!-- 20 to 25Rnd -->
+						</statOffsets>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model607A_30Rnd</defName>
+						<label>Colt Model 607A (30Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant uses a later production 30-round magazine.</description>
+						<commonality>0.1</commonality> <!-- 1 in 10 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model607A_30Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.05</Mass> <!-- 20 to 30Rnd -->
+						</statOffsets>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model607A_30Rnd_Folded</defName>
+						<label>Colt Model 607A (30Rnd Folded)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant uses a later production 30-round magazine, and the stock has been folded.</description>
+						<commonality>0.1</commonality> <!-- 1 in 10 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model607A_30Rnd_Folded</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.05</Mass> <!-- 20 to 30Rnd -->
+						</statOffsets>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model607A_100RndCMAG</defName>
+						<label>Colt Model 607A (100Rnd CMAG)</label>
+						<description>Caliber: 5.56x45mm NATO. 100-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a 100-round Beta C-Mag.</description>
+						<commonality>0.01</commonality> <!-- 1 in 100 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model607A_100RndCMAG</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.8</Mass> <!-- 20 to 100Rnd CMAG -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<burstShotCount>2</burstShotCount> <!-- +2 from drum mag -->
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model607A_150Rnd</defName>
+						<label>Colt Model 607A (150Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 150-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a 150-round Armatac SAW-MAG.</description>
+						<commonality>0.00</commonality> <!-- never spawns -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model607A_150Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.4</Mass> <!-- 20 to 150Rnd -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<burstShotCount>2</burstShotCount> <!-- +2 from drum mag -->
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model607A_180Rnd</defName>
+						<label>Colt Model 607A (180Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 180-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a 180-round drum made by combining two 90-round MWG "Ninety Rounder" magazines.</description>
+						<commonality>0.00</commonality> <!-- never spawns -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model607A_180Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.8</Mass> <!-- 20 to 180Rnd -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<burstShotCount>2</burstShotCount> <!-- +2 from drum mag -->
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model607A_Scope</defName>
+						<label>Colt Model 607A (Scope)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has an attached Colt 3x20 scope.</description>
+						<commonality>0.08</commonality> <!-- 1 in 12.5 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model607A_Scope</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.1</Mass> <!-- Colt 3x20 (0.1) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model607A_BFH</defName>
+						<label>Colt Model 607A BFH</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant replaces the standard 607-style moderator with a birdcage-style flash hider as used on the later M16A1.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model607A_BFH</texPath>
+						</graphicData>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model607A_BFH_Folded</defName>
+						<label>Colt Model 607A BFH (Folded)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant replaces the standard 607-style moderator with a birdcage-style flash hider as used on the later M16A1, and the stock has been folded.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model607A_BFH_Folded</texPath>
+						</graphicData>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model607A_CFH</defName>
+						<label>Colt Model 607A CFH</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant replaces the standard 607-style moderator with the experimental conical flash hider developed for the Colt Model 608.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model607A_CFH</texPath>
+						</graphicData>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model607A_DFH</defName>
+						<label>Colt Model 607A DFH</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant replaces the standard 607-style moderator with a three prong/"duckbill"-style flash hider as used on the M16.</description>
+						<commonality>0.25</commonality> <!-- 1 in 4 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model607A_DFH</texPath>
+						</graphicData>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model607A_DFH_Folded</defName>
+						<label>Colt Model 607A DFH (Folded)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant replaces the standard 607-style moderator with a three prong/"duckbill"-style flash hider as used on the M16, and the stock has been folded.</description>
+						<commonality>0.25</commonality> <!-- 1 in 4 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model607A_DFH_Folded</texPath>
+						</graphicData>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model607A_DFH_30Rnd</defName>
+						<label>Colt Model 607A DFH (30Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant replaces the standard 607-style moderator with a three prong/"duckbill"-style flash hider as used on the M16, and uses a later production 30-round magazine.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model607A_DFH_30Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.05</Mass> <!-- 20 to 30Rnd -->
+						</statOffsets>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model607A_DFH_30Rnd_Folded</defName>
+						<label>Colt Model 607A DFH (30Rnd Folded)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant replaces the standard 607-style moderator with a three prong/"duckbill"-style flash hider as used on the M16, uses a later production 30-round magazine, and the stock has been folded.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model607A_DFH_30Rnd_Folded</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.05</Mass> <!-- 20 to 30Rnd -->
+						</statOffsets>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model607A_XM148</defName>
+						<label>Colt Model 607A XM148</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has been modified to accommodate an XM148 grenade launcher.</description>
+						<commonality>0.01</commonality> <!-- 1 in 100 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model607A_XM148</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.35</Mass> <!-- XM148 Grenade Launcher -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>M607A</label>
+								<commandIcon>CGF1/Gun/Variant/Colt_Model607A_XM148</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.5</warmupTime>
+								<range>20.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>XM148</label>
+								<commandIcon>CGF1/Underbarrel/XM148</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+				</variants>
+			</li>
+		</comps>
 	</ThingDef>
 	
 	

@@ -87,6 +87,52 @@
 		<thingSetMakerTags>
 			<li>CGF1_GunsGalore_RewardAncient_Common</li>
 		</thingSetMakerTags>
+		
+		<comps>
+			<li Class="WeaponVariants.CompProperties_WeaponVariants">
+				<generateBaseWeapon>true</generateBaseWeapon>
+				<variants>
+					<li>
+						<defName>CGF1_MWP_Colt_Model605_XM148</defName>
+						<label>Colt Model 605 XM148</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an XM148 grenade launcher.</description>
+						<commonality>0.08</commonality> <!-- 1 in 12.5 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model605_XM148</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.35</Mass> <!-- XM148 Grenade Launcher -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>M605</label>
+								<commandIcon>CGF1/Gun/Variant/Colt_Model605_XM148</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.5</warmupTime>
+								<range>20.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>XM148</label>
+								<commandIcon>CGF1/Underbarrel/XM148</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+				</variants>
+			</li>
+		</comps>
 	</ThingDef>
 	
 </Defs>

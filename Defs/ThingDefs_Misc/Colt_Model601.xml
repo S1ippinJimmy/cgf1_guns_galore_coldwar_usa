@@ -87,6 +87,153 @@
 		<thingSetMakerTags>
 			<li>CGF1_GunsGalore_RewardAncient_Common</li>
 		</thingSetMakerTags>
+		
+		<comps>
+			<li Class="WeaponVariants.CompProperties_WeaponVariants">
+				<generateBaseWeapon>true</generateBaseWeapon>
+				<variants>
+					<li>
+						<defName>CGF1_MWP_Colt_Model601_SD</defName>
+						<label>Colt Model 601 (SD)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has an attached suppressor.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model601_SD</texPath>
+							<drawSize>1.15</drawSize>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.2</Mass> <!-- Suppressor -->
+						</statOffsets>
+						<equippedStatOffsets>
+							<HuntingStealth>0.5</HuntingStealth> <!-- 0.5 for suppressors -->
+						</equippedStatOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
+								<muzzleFlashScale>1</muzzleFlashScale>
+							</li>
+						</verbModifiers>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>CGF1_MF_StandardMuzzleFlashSD</def>
+								<drawSize>(0.3,0.3)</drawSize>
+								<offsets>
+									<li>(0.77,0.06)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model601_25Rnd</defName>
+						<label>Colt Model 601 (25Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 25-round detachable mag. Select-Fire.\n\nThis variant uses a rare, early 25-round AR-15 test magazine.</description>
+						<commonality>0.1</commonality> <!-- 1 in 10 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model601_25Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.02</Mass> <!-- 20 to 25Rnd -->
+						</statOffsets>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model601_30Rnd</defName>
+						<label>Colt Model 601 (30Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant uses a later production 30-round magazine.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model601_30Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.05</Mass> <!-- 20 to 30Rnd -->
+						</statOffsets>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model601_ANPVS2</defName>
+						<label>Colt Model 601 (AN/PVS-2)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has an attached AN/PVS-2 "Starlight" scope.</description>
+						<commonality>0.0125</commonality> <!-- 1 in 80 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model601_ANPVS2</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>2.7</Mass> <!-- AN/PVS-2 -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model601_Scope</defName>
+						<label>Colt Model 601 (Scope)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has an attached Colt 3x20 scope.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model601_Scope</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.1</Mass> <!-- Colt 3x20 (0.1) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model601_Black</defName>
+						<label>Colt Model 601 Black</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has been fitted with black furniture.</description>
+						<commonality>1</commonality> <!-- 1 in 1 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model601_Black</texPath>
+						</graphicData>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model601_Black_25Rnd</defName>
+						<label>Colt Model 601 Black (25Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 25-round detachable mag. Select-Fire.\n\nThis variant has been fitted with black furniture and uses a rare, early 25-round AR-15 test magazine.</description>
+						<commonality>0.1</commonality> <!-- 1 in 10 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model601_Black_25Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.02</Mass> <!-- 20 to 25Rnd -->
+						</statOffsets>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model601_Black_30Rnd</defName>
+						<label>Colt Model 601 Black (30Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with black furniture and uses a later production 30-round magazine.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model601_Black_30Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.05</Mass> <!-- 20 to 30Rnd -->
+						</statOffsets>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model601_Early</defName>
+						<label>Colt Model 601 Early</label>
+						<description>Caliber: 5.56x45mm NATO. 25-round detachable mag. Select-Fire.\n\nThis variant represents an early production model with a mismatched lower (from an Armalite AR-15) and is loaded with a rare, early 25-round AR-15 test magazine.</description>
+						<commonality>0.0125</commonality> <!-- 1 in 80 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model601_Early</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.02</Mass> <!-- 20 to 25Rnd -->
+						</statOffsets>
+					</li>
+				</variants>
+			</li>
+		</comps>
 	</ThingDef>
 	
 </Defs>

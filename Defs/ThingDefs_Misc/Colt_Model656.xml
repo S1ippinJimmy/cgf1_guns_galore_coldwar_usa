@@ -89,6 +89,34 @@
 		<thingSetMakerTags>
 			<li>CGF1_GunsGalore_RewardAncient_Prototype</li>
 		</thingSetMakerTags>
+		
+		<comps>
+			<li Class="WeaponVariants.CompProperties_WeaponVariants">
+				<generateBaseWeapon>true</generateBaseWeapon>
+				<variants>
+					<li>
+						<defName>CGF1_MWP_Colt_Model656_Irons</defName>
+						<label>Colt Model 656 (Irons)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has had its optic removed.</description>
+						<commonality>0.08</commonality> <!-- 1 in 12.5 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model656_Irons</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>-0.2</Mass> <!-- Scope Removed -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>-6</range>
+								<warmupTime>-0.5</warmupTime>
+								<burstShotCount>1</burstShotCount> <!-- +1 from optic removed -->
+							</li>
+						</verbModifiers>
+					</li>
+				</variants>
+			</li>
+		</comps>
 	</ThingDef>
 	
 </Defs>

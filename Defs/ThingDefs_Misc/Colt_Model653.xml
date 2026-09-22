@@ -84,6 +84,212 @@
 			</li>
 		</modExtensions>
 		<generateCommonality>0.5</generateCommonality> <!-- Abundant -->
+		
+		<comps>
+			<li Class="WeaponVariants.CompProperties_WeaponVariants">
+				<generateBaseWeapon>true</generateBaseWeapon>
+				<variants>
+					<li>
+						<defName>CGF1_MWP_Colt_Model653_20Rnd</defName>
+						<label>Colt Model 653 (20Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant uses a 20-round magazine.</description>
+						<commonality>0.2</commonality> <!-- 1 in 5 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model653_20Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>-0.05</Mass> <!-- 30 to 20Rnd -->
+						</statOffsets>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model653_100RndCMAG</defName>
+						<label>Colt Model 653 (100Rnd CMAG)</label>
+						<description>Caliber: 5.56x45mm NATO. 100-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a 100-round Beta C-Mag.</description>
+						<commonality>0.01</commonality> <!-- 1 in 100 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model653_100RndCMAG</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.75</Mass> <!-- 30 to 100Rnd CMAG -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<burstShotCount>2</burstShotCount> <!-- +2 from drum mag -->
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model653_Aimpoint</defName>
+						<label>Colt Model 653 (Aimpoint)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached Aimpoint 3000 red dot optic.</description>
+						<commonality>0.1</commonality> <!-- 1 in 10 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model653_Aimpoint</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.1</Mass> <!-- Aimpoint 3000 (0.1) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<warmupTime>-0.05</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model653_Scope</defName>
+						<label>Colt Model 653 (Scope)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached Colt 3x20 scope.</description>
+						<commonality>0.1</commonality> <!-- 1 in 10 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model653_Scope</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.1</Mass> <!-- Colt 3x20 (0.1) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model653_M203</defName>
+						<label>Colt Model 653 M203</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an M203 grenade launcher.</description>
+						<commonality>0.1</commonality> <!-- 1 in 10 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model653_M203</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.4</Mass> <!-- M203 -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>M653</label>
+								<commandIcon>CGF1/Gun/Variant/Colt_Model653_M203</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.5</warmupTime>
+								<range>20.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>M203</label>
+								<commandIcon>CGF1/Underbarrel/M203</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model653_CienerOU</defName>
+						<label>Colt Model 653 Ciener O/U</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a Ciener O/U shotgun.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model653_CienerOU</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>2.4</Mass> <!-- Ciener O/U -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>M653</label>
+								<commandIcon>CGF1/Gun/Variant/Colt_Model653_CienerOU</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_12Gauge_Slug_Shotgun</defaultProjectile>
+								<warmupTime>1</warmupTime>
+								<range>12.9</range>
+								<soundCast>CGF1_MWP_SFX_Shotgun1</soundCast>
+								<soundCastTail>GunTail_Heavy</soundCastTail>
+								<muzzleFlashScale>9</muzzleFlashScale>
+								<label>Ciener O/U</label>
+								<commandIcon>CGF1/Underbarrel/CienerUltimate_OU</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model653_Masterkey</defName>
+						<label>Colt Model 653 Masterkey</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a KAC Masterkey shotgun.</description>
+						<commonality>0.04</commonality> <!-- 1 in 25 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model653_Masterkey</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>2.0</Mass> <!-- KAC Masterkey-->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>M653</label>
+								<commandIcon>CGF1/Gun/Variant/Colt_Model653_Masterkey</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_12Gauge_Slug_Shotgun</defaultProjectile>
+								<warmupTime>1</warmupTime>
+								<range>12.9</range>
+								<soundCast>CGF1_MWP_SFX_Shotgun_Auto1</soundCast>
+								<soundCastTail>GunTail_Heavy</soundCastTail>
+								<muzzleFlashScale>9</muzzleFlashScale>
+								<label>KAC Masterkey</label>
+								<commandIcon>CGF1/Underbarrel/Masterkey</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model653GS</defName>
+						<label>Colt Model 653 GS</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been painted with camouflage reminiscent of those used in Operation Gothic Serpent, also known as the Battle of Mogadishu in 1993.</description>
+						<commonality>0.0125</commonality> <!-- 1 in 80 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model653GS</texPath>
+						</graphicData>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model653_Aimpoint</defName>
+						<label>Colt Model 653 GS (Aimpoint)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been painted with camouflage reminiscent of those used in Operation Gothic Serpent, also known as the Battle of Mogadishu in 1993. It has an attached Aimpoint 3000 red dot optic.</description>
+						<commonality>0.0125</commonality> <!-- 1 in 80 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model653GS_Aimpoint</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.1</Mass> <!-- Aimpoint 3000 (0.1) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<warmupTime>-0.05</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+				</variants>
+			</li>
+		</comps>
 	</ThingDef>
 	
 	

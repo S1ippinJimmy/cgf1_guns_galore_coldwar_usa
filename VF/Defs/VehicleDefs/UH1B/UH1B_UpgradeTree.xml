@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.UpgradeTreeDef>
+		<defName>CGF1_MWP_Vehicle_UH1B_UpgradeTree</defName>
+		 
+		<nodes>
+		
+			<li>
+				<key>XM3</key>
+				<label>Install XM3 armament subsystem.</label>
+				<description>Install a pair of pylons fitted with ARA rocket pods, each containing 24 missiles, for a total of 48.</description>
+				
+				<icon>CGF1/Vehicle/UH1B/Upgrade_XM3_ARASide_east</icon>
+				
+				<work>5000</work>
+				
+				<disableIfUpgradeNodesEnabled>
+					<li>XM17</li>
+					<li>XM21</li>
+					<li>XM22</li>
+				</disableIfUpgradeNodesEnabled>
+				
+				<gridCoordinate>(30, 1)</gridCoordinate>
+				<drawSize>(50,50)</drawSize>
+				
+				<ingredients>
+					<Steel>150</Steel>
+					<ComponentIndustrial>6</ComponentIndustrial>
+				</ingredients>
+				
+				<graphicOverlays>
+					<li>
+						<graphicData>
+							<texPath>CGF1/Vehicle/UH1B/Upgrade_XM3_ARASide</texPath>
+							<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+							<drawSize>(1.5,1.5)</drawSize>
+							<drawOffsetEast>(2.00, 0, -1)</drawOffsetEast>
+							<drawOffsetWest>(-2.00, 0, -1)</drawOffsetWest>
+							<layer>1</layer>
+							<shaderType>CutoutComplexPattern</shaderType>
+						</graphicData>
+					</li>
+					<li>
+						<graphicData>
+							<texPath>CGF1/Vehicle/UH1B/Upgrade_XM3_ARA</texPath>
+							<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+							<drawSize>(1.7,1.7)</drawSize>
+							<drawOffsetNorth>(-1.3, 0, 1.5)</drawOffsetNorth>
+							<drawOffsetSouth>(-1.2, 0, -2.6)</drawOffsetSouth>
+							<layer>-1</layer>
+							<shaderType>CutoutComplexPattern</shaderType>
+						</graphicData>
+					</li>
+					<li>
+						<graphicData>
+							<texPath>CGF1/Vehicle/UH1B/Upgrade_XM3_ARARight</texPath>
+							<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+							<drawSize>(1.7,1.7)</drawSize>
+							<drawOffsetNorth>(1.3, 0, 1.5)</drawOffsetNorth>
+							<drawOffsetSouth>(1.2, 0, -2.6)</drawOffsetSouth>
+							<layer>-1</layer>
+							<shaderType>CutoutComplexPattern</shaderType>
+						</graphicData>
+					</li>
+				</graphicOverlays>
+			</li>
+		
+			<li>
+				<key>XM17</key>
+				<label>Install XM17 armament subsystem.</label>
+				<description>Install a pair of pylons fitted with M159 rocket pods, each containing 19 missiles, for a total of 38.</description>
+				
+				<icon>CGF1/Vehicle/UH1B/Upgrade_XM17_M159Side_east</icon>
+				
+				<work>4000</work>
+				
+				<disableIfUpgradeNodesEnabled>
+					<li>XM3</li>
+					<li>XM21</li>
+					<li>XM22</li>
+				</disableIfUpgradeNodesEnabled>
+				
+				<gridCoordinate>(30, 4)</gridCoordinate>
+				<drawSize>(50,50)</drawSize>
+				
+				<ingredients>
+					<Steel>120</Steel>
+					<ComponentIndustrial>6</ComponentIndustrial>
+				</ingredients>
+				
+				<graphicOverlays>
+					<li>
+						<graphicData>
+							<texPath>CGF1/Vehicle/UH1B/Upgrade_XM17_M159Side</texPath>
+							<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+							<drawSize>(1.3,1.3)</drawSize>
+							<drawOffsetEast>(2.00, 0, -1)</drawOffsetEast>
+							<drawOffsetWest>(-2.00, 0, -1)</drawOffsetWest>
+							<layer>1</layer>
+							<shaderType>CutoutComplexPattern</shaderType>
+						</graphicData>
+					</li>
+					<li>
+						<graphicData>
+							<texPath>CGF1/Vehicle/UH1B/Upgrade_XM17_M159</texPath>
+							<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+							<drawSize>(4,4)</drawSize>
+							<drawOffsetNorth>(0, 0, 1.5)</drawOffsetNorth>
+							<drawOffsetSouth>(0, 0, -2.8)</drawOffsetSouth>
+							<layer>-1</layer>
+							<shaderType>CutoutComplexPattern</shaderType>
+						</graphicData>
+					</li>
+				</graphicOverlays>
+			</li>
+			
+			<li>
+				<key>XM21</key>
+				<label>Install XM21 armament subsystem.</label>
+				<description>Install a pair of pylons fitted with M157 rocket pods, each containing 7 missiles, for a total of 14, as well as twin M134 miniguns.</description>
+				
+				<icon>CGF1/Vehicle/UH1B/Upgrade_XM21_M157_M134Side_east</icon>
+				
+				<work>10000</work>
+				
+				<disableIfUpgradeNodesEnabled>
+					<li>XM3</li>
+					<li>XM17</li>
+					<li>XM22</li>
+				</disableIfUpgradeNodesEnabled>
+				
+				<gridCoordinate>(30, 7)</gridCoordinate>
+				<drawSize>(50,50)</drawSize>
+				
+				<upgrades>
+					<li Class="Vehicles.TurretUpgrade">
+						<turrets>
+							<li>
+								<turretDef>CGF1_MWP_Vehicle_TurretGun_M134_Coaxial_</turretDef>
+								
+								<renderProperties>
+									<north>(-2.42, 2)</north>
+									<south>(2.35, -2.2)</south>
+									<east>(2.1, 1.23)</east>
+									<west>(-2.1, -1.23)</west>
+								</renderProperties>
+								<drawLayer>1</drawLayer>
+
+								<gizmoLabel>M134 Left</gizmoLabel>  <!-- M134 Left -->
+								
+								<angleRestricted>(335, 25)</angleRestricted>
+								<aimPieOffset>(0, 0.3)</aimPieOffset>
+								
+								<key>mainTurret</key>
+							</li>
+							<li>
+								<turretDef>CGF1_MWP_Vehicle_TurretGun_M157_Coaxial_</turretDef>
+								
+								<renderProperties>
+									<north>(-1.68, 2.2)</north>
+									<south>(1.63, -2.5)</south>
+									<east>(2, 1.1)</east>
+									<west>(-2, -1.1)</west>
+								</renderProperties>
+								<drawLayer>1</drawLayer>
+
+								<gizmoLabel>M157 Left</gizmoLabel> <!-- M157 Left -->
+								
+								<angleRestricted>(335, 25)</angleRestricted>
+								<aimPieOffset>(0, 0.3)</aimPieOffset>
+								
+								<key>mainTurret</key>
+							</li>
+							
+							<li>
+								<turretDef>CGF1_MWP_Vehicle_TurretGun_M134_Coaxial_</turretDef>
+								
+								<renderProperties>
+									<north>(2.42, 2)</north>
+									<south>(-2.35, -2.2)</south>
+									<east>(2.1, -1.23)</east>
+									<west>(-2.1, 1.23)</west>
+								</renderProperties>
+								<drawLayer>1</drawLayer>
+
+								<gizmoLabel>M134 Right</gizmoLabel> <!-- M134 Right -->
+								
+								<angleRestricted>(335, 25)</angleRestricted>
+								<aimPieOffset>(0, 0.3)</aimPieOffset>
+								
+								<key>mainTurret</key>
+							</li>
+							<li>
+								<turretDef>CGF1_MWP_Vehicle_TurretGun_M157_Coaxial_</turretDef>
+								
+								<renderProperties>
+									<north>(1.68, 2.2)</north>
+									<south>(-1.63, -2.5)</south>
+									<east>(2, -1.1)</east>
+									<west>(-2, 1.1)</west>
+								</renderProperties>
+								<drawLayer>1</drawLayer>
+
+								<gizmoLabel>M157 Right</gizmoLabel> <!-- M157 Right -->
+								
+								<angleRestricted>(335, 25)</angleRestricted>
+								<aimPieOffset>(0, 0.3)</aimPieOffset>
+								
+								<key>mainTurret</key>
+							</li>
+
+						</turrets>
+					</li>
+				</upgrades>
+				
+				<ingredients>
+					<Steel>150</Steel>
+					<ComponentIndustrial>8</ComponentIndustrial>
+				</ingredients>
+				
+				<graphicOverlays>
+					<li>
+						<graphicData>
+							<texPath>CGF1/Vehicle/UH1B/Upgrade_XM21_M157_M134Side</texPath>
+							<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+							<drawSize>(1.3,1.3)</drawSize>
+							<drawOffsetEast>(2.00, 0, -1)</drawOffsetEast>
+							<drawOffsetWest>(-2.00, 0, -1)</drawOffsetWest>
+							<layer>1</layer>
+							<shaderType>CutoutComplexPattern</shaderType>
+						</graphicData>
+					</li>
+					<li>
+						<graphicData>
+							<texPath>CGF1/Vehicle/UH1B/Upgrade_XM21_M157_M134</texPath>
+							<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+							<drawSize>(5.2,5.2)</drawSize>
+							<drawOffsetNorth>(0, 0, 1.3)</drawOffsetNorth>
+							<drawOffsetSouth>(0, 0, -2.6)</drawOffsetSouth>
+							<layer>-1</layer>
+							<shaderType>CutoutComplexPattern</shaderType>
+						</graphicData>
+					</li>
+				</graphicOverlays>
+			</li>
+			
+			<li>
+				<key>XM22</key>
+				<label>Install XM22 armament subsystem.</label>
+				<description>Install a pair of pylons fitted with six AGM-22 (SS.11) missiles.</description>
+				
+				<icon>CGF1/Vehicle/UH1B/Upgrade_XM11_AGM22Side_east</icon>
+				
+				<work>5000</work>
+				
+				<disableIfUpgradeNodesEnabled>
+					<li>XM3</li>
+					<li>XM17</li>
+					<li>XM21</li>
+				</disableIfUpgradeNodesEnabled>
+				
+				<gridCoordinate>(30, 10)</gridCoordinate>
+				<drawSize>(50,50)</drawSize>
+				
+				<ingredients>
+					<Steel>120</Steel>
+					<ComponentIndustrial>6</ComponentIndustrial>
+				</ingredients>
+				
+				<graphicOverlays>
+					<li>
+						<graphicData>
+							<texPath>CGF1/Vehicle/UH1B/Upgrade_XM11_AGM22Side</texPath>
+							<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+							<drawSize>(3.2,3.2)</drawSize>
+							<drawOffsetEast>(2.10, 0, -1.5)</drawOffsetEast>
+							<drawOffsetWest>(-2.10, 0, -1.5)</drawOffsetWest>
+							<layer>1</layer>
+							<shaderType>CutoutComplexPattern</shaderType>
+						</graphicData>
+					</li>
+					<li>
+						<graphicData>
+							<texPath>CGF1/Vehicle/UH1B/Upgrade_XM11_AGM22Side_Top</texPath>
+							<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+							<drawSize>(3.2,3.2)</drawSize>
+							<drawOffsetEast>(2.10, 0, 1.7)</drawOffsetEast>
+							<drawOffsetWest>(-2.10, 0, 1.7)</drawOffsetWest>
+							<layer>-1</layer>
+							<shaderType>CutoutComplexPattern</shaderType>
+						</graphicData>
+					</li>
+					<li>
+						<graphicData>
+							<texPath>CGF1/Vehicle/UH1B/Upgrade_XM11_AGM22</texPath>
+							<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+							<drawSize>(6.5,6.5)</drawSize>
+							<drawOffsetNorth>(0, 0, 1.5)</drawOffsetNorth>
+							<drawOffsetSouth>(0, 0, -2.5)</drawOffsetSouth>
+							<layer>-1</layer>
+							<shaderType>CutoutComplexPattern</shaderType>
+						</graphicData>
+					</li>
+				</graphicOverlays>
+			</li>
+		
+		</nodes>
+	</Vehicles.UpgradeTreeDef>
+</Defs>

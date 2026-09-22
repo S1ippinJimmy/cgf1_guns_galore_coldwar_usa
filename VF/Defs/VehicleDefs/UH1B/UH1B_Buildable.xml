@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+		<defName>CGF1_MWP_Vehicle_UH1B_Blueprint</defName>
+		<label>UH-1B</label>
+		<description>A utility helicopter designed and manufactured by Bell Helicopter. Known officially as "Iroquois" and more commonly as "Huey," the UH-1 series formed the backbone of the US Army helicopter fleet for decades, and was widely exported internationally. The UH-1B was an upgraded version of the original production UH-1A aircraft with an improved engine and new rotorblades. It was used as both a transport/utility aircraft (a configuration known as "slick") and also as a gunship.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Pilot x2, Passenger x4\n&lt;color=#bb8f04&gt;Fuel type:&lt;/color&gt; Chemfuel</description>
+		<designationCategory>CGF1_MWP_Category_GunsGalore</designationCategory>
+		
+		<graphicData>
+			<texPath>CGF1/Vehicle/UH1B/UH1B</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3.5, 9.1)</drawSize>
+		</graphicData>
+		
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<WorkToBuild>33000</WorkToBuild>
+			<Flammability>0.05</Flammability>
+		</statBases>
+		
+		<size>(3, 8)</size>
+		
+		<researchPrerequisites>
+			<li>CGF1_MWP_Research_T8_AtomicAgeFirearms</li>
+		</researchPrerequisites>
+		
+		<costList>
+			<Steel>740</Steel>
+			<ComponentIndustrial>27</ComponentIndustrial>
+		</costList>
+		
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		
+		<thingToSpawn>CGF1_MWP_Vehicle_UH1B_</thingToSpawn>
+		
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+</Defs>

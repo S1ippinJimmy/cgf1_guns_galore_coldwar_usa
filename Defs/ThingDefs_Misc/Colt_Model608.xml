@@ -86,6 +86,114 @@
 		<thingSetMakerTags>
 			<li>CGF1_GunsGalore_RewardAncient_Prototype</li>
 		</thingSetMakerTags>
+		
+		<comps>
+			<li Class="WeaponVariants.CompProperties_WeaponVariants">
+				<generateBaseWeapon>true</generateBaseWeapon>
+				<variants>
+					<li>
+						<defName>CGF1_MWP_Colt_Model608_30Rnd</defName>
+						<label>Colt Model 608 (30Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant uses a later production 30-round magazine.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model608_30Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.05</Mass> <!-- 20 to 30Rnd -->
+						</statOffsets>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model608_Scope</defName>
+						<label>Colt Model 608 (Scope)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has an attached Colt 3x20 scope.</description>
+						<commonality>0.01</commonality> <!-- 1 in 100 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model608_Scope</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.1</Mass> <!-- Colt 3x20 -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3.9</range>
+								<warmupTime>0.15</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model608_BFH</defName>
+						<label>Colt Model 608 BFH</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant replaces the standard 607-style moderator with a birdcage-style flash hider as used on the later M16A1.</description>
+						<commonality>0.01</commonality> <!-- 1 in 100 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model608_BFH</texPath>
+						</graphicData>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model608_CFH</defName>
+						<label>Colt Model 608 CFH</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant replaces the standard 607-style moderator with the experimental conical flash hider developed for the Colt Model 608.</description>
+						<commonality>1</commonality> <!-- 1 in 1 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model608_CFH</texPath>
+						</graphicData>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model608_DFH</defName>
+						<label>Colt Model 608 DFH</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant replaces the standard 607-style moderator with a three prong/"duckbill"-style flash hider as used on the M16.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model608_DFH</texPath>
+						</graphicData>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Colt_Model608_FG</defName>
+						<label>Colt Model 608 FG</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has a full-sized pistol grip that hasn't been cut down.</description>
+						<commonality>0.1</commonality> <!-- 1 in 10 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model608_FG</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.05</Mass> <!-- Longer pistol grip -->
+						</statOffsets>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Colt_Model608_FG_CFH</defName>
+						<label>Colt Model 608 FG CFH</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has a full-sized pistol grip that hasn't been cut down and replaces the standard 607-style moderator with the experimental conical flash hider developed for the Colt Model 608.</description>
+						<commonality>0.1</commonality> <!-- 1 in 10 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model608_FG_CFH</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.05</Mass> <!-- Longer pistol grip -->
+						</statOffsets>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Colt_Model608_Stubby</defName>
+						<label>Colt Model 608 Stubby</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant's pistol grip has been cut down even further than the standard model.</description>
+						<commonality>0.5</commonality> <!-- 1 in 2 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model608_Stubby</texPath>
+						</graphicData>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Colt_Model608_Stubby_CFH</defName>
+						<label>Colt Model 608 Stubby</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant's pistol grip has been cut down even further than the standard modeland replaces the standard 607-style moderator with the experimental conical flash hider developed for the Colt Model 608.</description>
+						<commonality>0.5</commonality> <!-- 1 in 2 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model608_Stubby_CFH</texPath>
+						</graphicData>
+					</li>
+				</variants>
+			</li>
+		</comps>
 	</ThingDef>
 	
 	

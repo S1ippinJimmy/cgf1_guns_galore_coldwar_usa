@@ -87,6 +87,26 @@
 		<thingSetMakerTags>
 			<li>CGF1_GunsGalore_RewardAncient_Common</li>
 		</thingSetMakerTags>
+		
+		<comps>
+			<li Class="WeaponVariants.CompProperties_WeaponVariants">
+				<generateBaseWeapon>true</generateBaseWeapon>
+				<variants>
+					<li>
+						<defName>CGF1_MWP_Colt_Model602_25Rnd</defName>
+						<label>Colt Model 602 (25Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 25-round detachable mag. Select-Fire.\n\nThis variant uses a rare, early 25-round AR-15 test magazine.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model602_25Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.02</Mass> <!-- 20 to 25Rnd -->
+						</statOffsets>
+					</li>
+				</variants>
+			</li>
+		</comps>
 	</ThingDef>
 	
 </Defs>

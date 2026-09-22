@@ -4,5 +4,7 @@
 		<li>/</li>
         <li IfModActive="CETeam.CombatExtended">CE</li>
         <li IfModActive="CETeam.CombatExtended_copy">CE</li>
+		<li IfModActive="SmashPhil.VehicleFramework,OskarPotocki.VanillaVehiclesExpanded">VF</li>
+		<li IfModActive="gabrieel1482.raidvehicleframework">VRF</li>
     </v1.6>
 </loadFolders>

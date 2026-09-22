@@ -84,6 +84,26 @@
 			</li>
 		</modExtensions>
 		<generateCommonality>0.05</generateCommonality> <!-- Uncommon -->
+		
+		<comps>
+			<li Class="WeaponVariants.CompProperties_WeaponVariants">
+				<generateBaseWeapon>true</generateBaseWeapon>
+				<variants>
+					<li>
+						<defName>CGF1_MWP_Colt_Model720_20Rnd</defName>
+						<label>Colt Model 720 (20Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant uses a 20-round magazine.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model720_20Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>-0.05</Mass> <!-- 30 to 20Rnd -->
+						</statOffsets>
+					</li>
+				</variants>
+			</li>
+		</comps>
 	</ThingDef>
 	
 	

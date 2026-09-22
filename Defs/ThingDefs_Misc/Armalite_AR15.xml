@@ -87,6 +87,32 @@
 		<thingSetMakerTags>
 			<li>CGF1_GunsGalore_RewardAncient_Common</li>
 		</thingSetMakerTags>
+		
+		<comps>
+			<li Class="WeaponVariants.CompProperties_WeaponVariants">
+				<generateBaseWeapon>true</generateBaseWeapon>
+				<variants>
+					<li>
+						<defName>CGF1_MWP_Armalite_AR15_Black</defName>
+						<label>Armalite AR-15 Black</label>
+						<description>Caliber: 5.56x45mm NATO. 25-round detachable mag. Select-Fire.\n\nThis variant is an Armalite AR-15 using black furniture.</description>
+						<commonality>0.4</commonality> <!-- 1 in 2.5 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Armalite_AR15_Black</texPath>
+						</graphicData>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Armalite_AR15_Early</defName>
+						<label>Armalite AR-15 Early</label>
+						<description>Caliber: 5.56x45mm NATO. 25-round detachable mag. Select-Fire.\n\nThis variant is an early test model of the Armalite AR-15 that uses earlier furniture and completely lacks a threaded barrel or muzzle attachment.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Armalite_AR15_Early</texPath>
+						</graphicData>
+					</li>
+				</variants>
+			</li>
+		</comps>
 	</ThingDef>
 	
 </Defs>

@@ -85,6 +85,23 @@ The Colt Model 607 was the first dedicated carbine variant of the M16, designed 
 			</li>
 		</modExtensions>
 		<generateCommonality>0.0125</generateCommonality> <!-- Rare -->
+		
+		<comps>
+			<li Class="WeaponVariants.CompProperties_WeaponVariants">
+				<generateBaseWeapon>true</generateBaseWeapon>
+				<variants>
+					<li>
+						<defName>CGF1_MWP_Colt_Model607B_DFH</defName>
+						<label>Colt Model 607B DFH</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant replaces the standard 607-style moderator with a three prong/"duckbill"-style flash hider as used on the M16.</description>
+						<commonality>0.25</commonality> <!-- 1 in 4 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model607B_DFH</texPath>
+						</graphicData>
+					</li>
+				</variants>
+			</li>
+		</comps>
 	</ThingDef>
 	
 	
