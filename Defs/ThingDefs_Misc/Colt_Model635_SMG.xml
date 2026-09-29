@@ -115,7 +115,7 @@
 							<li>
 								<verbIndex>0</verbIndex>
 								<soundCast>CGF1_MWP_SFX_SMG_SD1</soundCast>
-								<muzzleFlashScale>1</muzzleFlashScale>
+								<muzzleFlashScale>-8</muzzleFlashScale>
 							</li>
 						</verbModifiers>
 						<modExtensions>
@@ -189,7 +189,7 @@
 							<li>
 								<verbIndex>0</verbIndex>
 								<soundCast>CGF1_MWP_SFX_SMG_SD1</soundCast>
-								<muzzleFlashScale>1</muzzleFlashScale>
+								<muzzleFlashScale>-8</muzzleFlashScale>
 								<range>3</range>
 								<warmupTime>0.15</warmupTime>
 							</li>

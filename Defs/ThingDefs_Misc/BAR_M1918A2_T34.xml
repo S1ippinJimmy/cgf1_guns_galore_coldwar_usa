@@ -6,7 +6,7 @@
 		<label>BAR M1918A2 T34</label>
 		<description>Caliber: 7.62x51mm NATO. 20-round detachable mag. Select-Fire.
 		
-The T34 is an M1918A2 Browning Automatic Rifle converted to .308 Winchester/7.62x51mm NATO by the US Army in the 1960s. Relatively little is known about the T34 conversions, and why they were created when the 7.62x51 cartridge was already in widespread use and the BAR was long out of regular service is unknown - one possibility, however, is that the conversions were meant to go to national guard units, who still possessed many WW2-era weapons.</description>
+The T34 is an M1918A2 Browning Automatic Rifle converted to .308 Winchester/7.62x51mm NATO by the US Army in the 1960s. Relatively little is known about the T34 conversions, and why they were created when the 7.62x51 cartridge was already in widespread use and the BAR was long out of regular service is unknown - one possibility, however, is that the conversions were meant to go to National Guard units, who still possessed many WW2-era weapons.</description>
 		<graphicData>
 			<texPath>CGF1/Gun/BAR_M1918A2_T34</texPath>
 			<drawSize>1.10</drawSize>
@@ -53,7 +53,7 @@ The T34 is an M1918A2 Browning Automatic Rifle converted to .308 Winchester/7.62
 				<warmupTime>1.8</warmupTime>
 				<range>30.9</range>
 				<burstShotCount>6</burstShotCount>
-				<ticksBetweenBurstShots>9</ticksBetweenBurstShots>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
 				<soundCast>CGF1_MWP_SFX_MG_Medium1</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
@@ -81,9 +81,9 @@ The T34 is an M1918A2 Browning Automatic Rifle converted to .308 Winchester/7.62
 		<modExtensions>
 			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
 				<def>MF_StandardMuzzleFalshThree</def>
-				<drawSize>(0.7,0.7)</drawSize>
+				<drawSize>(0.6,0.6)</drawSize>
 				<offsets>
-					<li>(0.70,0.05)</li>
+					<li>(0.70,0.07)</li>
 				</offsets>
 			</li>
 		</modExtensions>

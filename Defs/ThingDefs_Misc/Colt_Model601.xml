@@ -111,7 +111,7 @@
 							<li>
 								<verbIndex>0</verbIndex>
 								<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
-								<muzzleFlashScale>1</muzzleFlashScale>
+								<muzzleFlashScale>-8</muzzleFlashScale>
 							</li>
 						</verbModifiers>
 						<modExtensions>

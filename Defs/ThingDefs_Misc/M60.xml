@@ -91,6 +91,26 @@ The M60 is an American belt-fed general purpose machine gun (GPMG) designed in t
 		<thingSetMakerTags>
 			<li>CGF1_GunsGalore_RewardAncient_Common</li>
 		</thingSetMakerTags>
+		
+		<comps>
+			<li Class="WeaponVariants.CompProperties_WeaponVariants">
+				<generateBaseWeapon>true</generateBaseWeapon>
+				<variants>
+					<li>
+						<defName>CGF1_MWP_M60_NB</defName>
+						<label>M60 (NB)</label>
+						<description>Caliber: 7.62x51mm NATO. 100-round bullet link. Select-Fire.\n\nThis variant has had its integral bipod removed.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M60_NB</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>-0.3</Mass> <!-- Bipod Removed -->
+						</statOffsets>
+					</li>
+				</variants>
+			</li>
+		</comps>
 	</ThingDef>
 	
 </Defs>

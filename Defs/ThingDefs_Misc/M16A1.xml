@@ -88,163 +88,710 @@
 		<thingSetMakerTags>
 			<li>CGF1_GunsGalore_RewardAncient_Common</li>
 		</thingSetMakerTags>
-	</ThingDef>
-	
-	<ThingDef ParentName="CGF1_MWP_AssaultRifle_T1">
-		<defName>CGF1_MWP_M16A1_Bayonet_</defName>
-		<label>M16A1 (Bayonet)</label>
-		<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.</description>
-		<graphicData>
-			<texPath>CGF1/Gun/UP/M16A1_Bayonet</texPath>
-			<drawSize>1.15</drawSize>
-		</graphicData>
-		<recipeMaker>
-			<recipeUsers>
-				<li>CGF1_MWP_Building_Gunsmith</li>
-			</recipeUsers>
-			<researchPrerequisite>CGF1_MWP_Research_T8_AtomicAgeFirearms</researchPrerequisite>
-			<skillRequirements>
-				<Crafting>6</Crafting>
-			</skillRequirements>
-		</recipeMaker>
-		<costList>
-			<Steel>60</Steel>
-			<ComponentIndustrial>7</ComponentIndustrial>
-		</costList>
-		<statBases>
-			<WorkToMake>40000</WorkToMake>
-			<Mass>3.7</Mass>
-			<AccuracyTouch>0.60</AccuracyTouch>
-			<AccuracyShort>0.60</AccuracyShort>
-			<AccuracyMedium>0.55</AccuracyMedium>
-			<AccuracyLong>0.50</AccuracyLong>
-			<RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
-		</statBases>
-		<equippedAngleOffset>40</equippedAngleOffset>
-		<weaponTags>
-			<li>CGF1_AR_Military</li>
-		</weaponTags>
-		<tradeTags Inherit="False">
-			<li>CGF1_GunsGalore_NoSpawn</li>
-		</tradeTags>
-		<verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>CGF1_MWP_Bullet_556x45mmNATO_Auto</defaultProjectile>
-				<warmupTime>1</warmupTime>
-				<range>30.9</range>
-				<burstShotCount>4</burstShotCount>
-				<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
-				<soundCast>CGF1_MWP_SFX_Rifle_Auto12</soundCast>
-				<soundCastTail>GunTail_Medium</soundCastTail>
-				<muzzleFlashScale>9</muzzleFlashScale>
+		
+		<comps>
+			<li Class="WeaponVariants.CompProperties_WeaponVariants">
+				<generateBaseWeapon>true</generateBaseWeapon>
+				<variants>
+					<li>
+						<defName>CGF1_MWP_M16A1_Bayonet</defName>
+						<label>M16A1 (Bayonet)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has an attached M7 bayonet.</description>
+						<commonality>0.04</commonality> <!-- 1 in 25 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A1_Bayonet</texPath>
+							<drawSize>1.15</drawSize>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.1</Mass> <!-- M7 Bayonet -->
+						</statOffsets>
+						<replaceTools>true</replaceTools>
+						<tools>
+							<li>
+								<label>stock</label>
+								<capacities>
+									<li>Blunt</li>
+								</capacities>
+								<power>10</power>
+								<cooldownTime>2</cooldownTime>
+							</li>
+							<li>
+								<label>bayonet</label>
+								<capacities>
+									<li>Stab</li>
+								</capacities>
+								<power>13</power>
+								<cooldownTime>2</cooldownTime>
+							</li>
+						</tools>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>MF_StandardMuzzleFalshThree</def>
+								<drawSize>(0.8,0.8)</drawSize>
+								<offsets>
+									<li>(0.65,0.07)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A1_SD</defName>
+						<label>M16A1 (SD)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has an attached suppressor.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A1_SD</texPath>
+							<drawSize>1.15</drawSize>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.2</Mass> <!-- Suppressor -->
+						</statOffsets>
+						<equippedStatOffsets>
+							<HuntingStealth>0.5</HuntingStealth> <!-- 0.5 for suppressors -->
+						</equippedStatOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
+								<muzzleFlashScale>-8</muzzleFlashScale>
+							</li>
+						</verbModifiers>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>CGF1_MF_StandardMuzzleFlashSD</def>
+								<drawSize>(0.3,0.3)</drawSize>
+								<offsets>
+									<li>(0.77,0.06)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A1_25Rnd</defName>
+						<label>M16A1 (25Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 25-round detachable mag. Select-Fire.\n\nThis variant uses a rare, early 25-round AR-15 test magazine.</description>
+						<commonality>0.04</commonality> <!-- 1 in 25 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A1_25Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.02</Mass> <!-- 20 to 25Rnd -->
+						</statOffsets>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A1_30Rnd</defName>
+						<label>M16A1 (30Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant uses a later production 30-round magazine.</description>
+						<commonality>1</commonality> <!-- 1 in 1 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A1_30Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.05</Mass> <!-- 20 to 30Rnd -->
+						</statOffsets>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A1_30Rnd_Bayonet</defName>
+						<label>M16A1 (30Rnd Bayonet)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached M7 bayonet.</description>
+						<commonality>0.04</commonality> <!-- 1 in 25 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A1_30Rnd_Bayonet</texPath>
+							<drawSize>1.15</drawSize>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.15</Mass> <!-- M7 Bayonet + 20 to 30Rnd -->
+						</statOffsets>
+						<replaceTools>true</replaceTools>
+						<tools>
+							<li>
+								<label>stock</label>
+								<capacities>
+									<li>Blunt</li>
+								</capacities>
+								<power>10</power>
+								<cooldownTime>2</cooldownTime>
+							</li>
+							<li>
+								<label>bayonet</label>
+								<capacities>
+									<li>Stab</li>
+								</capacities>
+								<power>13</power>
+								<cooldownTime>2</cooldownTime>
+							</li>
+						</tools>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>MF_StandardMuzzleFalshThree</def>
+								<drawSize>(0.8,0.8)</drawSize>
+								<offsets>
+									<li>(0.65,0.07)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A1_30Rnd_SD</defName>
+						<label>M16A1 (30Rnd SD)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached suppressor.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A1_30Rnd_SD</texPath>
+							<drawSize>1.15</drawSize>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.25</Mass> <!-- Suppressor + 20 to 30Rnd -->
+						</statOffsets>
+						<equippedStatOffsets>
+							<HuntingStealth>0.5</HuntingStealth> <!-- 0.5 for suppressors -->
+						</equippedStatOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
+								<muzzleFlashScale>-8</muzzleFlashScale>
+							</li>
+						</verbModifiers>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>CGF1_MF_StandardMuzzleFlashSD</def>
+								<drawSize>(0.3,0.3)</drawSize>
+								<offsets>
+									<li>(0.77,0.06)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A1_60Rnd</defName>
+						<label>M16A1 (60Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 60-round detachable mag. Select-Fire.\n\nThis variant uses a Surefire MAG5-60 quad-stack magazine.</description>
+						<commonality>0.025</commonality> <!-- 1 in 40 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A1_60Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.5</Mass> <!-- 20 to 60Rnd Surefire -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<burstShotCount>2</burstShotCount> <!-- +2 from drum mag -->
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A1_100Rnd</defName>
+						<label>M16A1 (100Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 100-round detachable mag. Select-Fire.\n\nThis variant uses a Surefire MAG5-100 quad-stack magazine.</description>
+						<commonality>0.025</commonality> <!-- 1 in 40 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A1_100Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.75</Mass> <!-- 20 to 100Rnd Surefire -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<burstShotCount>2</burstShotCount> <!-- +2 from drum mag -->
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A1_100RndCMAG</defName>
+						<label>M16A1 (100Rnd CMAG)</label>
+						<description>Caliber: 5.56x45mm NATO. 100-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a 100-round Beta C-Mag.</description>
+						<commonality>0.025</commonality> <!-- 1 in 40 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A1_100RndCMAG</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.8</Mass> <!-- 20 to 100Rnd CMAG -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<burstShotCount>2</burstShotCount> <!-- +2 from drum mag -->
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A1_180Rnd</defName>
+						<label>M16A1 (180Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 180-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a 180-round drum made by combining two 90-round MWG "Ninety Rounder" magazines.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A1_180Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.8</Mass> <!-- 20 to 180Rnd -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<burstShotCount>2</burstShotCount> <!-- +2 from drum mag -->
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A1_ANPVS2</defName>
+						<label>M16A1 (AN/PVS-2)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has an attached AN/PVS-2 "Starlight" scope.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A1_ANPVS2</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>2.7</Mass> <!-- AN/PVS-2 -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A1_ANPVS4</defName>
+						<label>M16A1 (AN/PVS-4)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has an attached AN/PVS-4 scope.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A1_ANPVS4</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.8</Mass> <!-- AN/PVS-4 -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A1_ANPVS4_30Rnd</defName>
+						<label>M16A1 (AN/PVS-4 30Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached AN/PVS-4 scope and uses a later production 30-round magazine.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A1_ANPVS4_30Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.85</Mass> <!-- AN/PVS-4 + 20 to 30Rnd -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A1_Scope</defName>
+						<label>M16A1 (Scope)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has an attached Colt 3x20 scope.</description>
+						<commonality>0.08</commonality> <!-- 1 in 12.5 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A1_Scope</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.1</Mass> <!-- Colt 3x20 (0.1) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A1_Scope_30Rnd</defName>
+						<label>M16A1 (Scope 30Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has an attached Colt 3x20 scope and uses a later production 30-round magazine.</description>
+						<commonality>0.08</commonality> <!-- 1 in 12.5 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A1_Scope_30Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.15</Mass> <!-- Colt 3x20 (0.1) + 20 to 30Rnd -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A1_Bipod</defName>
+						<label>M16A1 (Bipod)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a fixed XM3 bipod.</description>
+						<commonality>0.04</commonality> <!-- 1 in 25 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A1_Bipod</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.2</Mass> <!-- XM3 Bipod -->
+						</statOffsets>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>MF_StandardMuzzleFalshThree</def>
+								<drawSize>(0.6,0.6)</drawSize>
+								<offsets>
+									<li>(0.65,0.05)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A1_LPC</defName>
+						<label>M16A1 LPC</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a Laser Products Corporation (LPC) Model 16 helium-neon laser system.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A1_LPC</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.2</Mass> <!-- LPC -->
+							<AccuracyTouch>0.05</AccuracyTouch>
+							<AccuracyShort>0.05</AccuracyShort>
+						</statOffsets>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A1_M203</defName>
+						<label>M16A1 M203</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an M203 grenade launcher.</description>
+						<commonality>0.1</commonality> <!-- 1 in 10 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A1_M203</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.4</Mass> <!-- M203 -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>M16A1</label>
+								<commandIcon>CGF1/Gun/Variant/M16A1_M203</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.5</warmupTime>
+								<range>20.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>M203</label>
+								<commandIcon>CGF1/Underbarrel/M203</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A1_M203_SD</defName>
+						<label>M16A1 M203 (SD)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an M203 grenade launcher and has an attached suppressor.</description>
+						<commonality>0.02</commonality> <!-- 1 in 80 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A1_M203_SD</texPath>
+							<drawSize>1.15</drawSize>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.6</Mass> <!-- M203 + Suppressor -->
+						</statOffsets>
+						<equippedStatOffsets>
+							<HuntingStealth>0.5</HuntingStealth> <!-- 0.5 for suppressors -->
+						</equippedStatOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
+								<muzzleFlashScale>-8</muzzleFlashScale>
+								<label>M16A1</label>
+								<commandIcon>CGF1/Gun/Variant/M16A1_M203_SD</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.5</warmupTime>
+								<range>20.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>M203</label>
+								<commandIcon>CGF1/Underbarrel/M203</commandIcon>
+							</li>
+						</addedVerbs>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>CGF1_MF_StandardMuzzleFlashSD</def>
+								<drawSize>(0.3,0.3)</drawSize>
+								<offsets>
+									<li>(0.77,0.06)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A1_M203_30Rnd</defName>
+						<label>M16A1 M203 (30Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an M203 grenade launcher and uses a later production 30-round magazine.</description>
+						<commonality>0.1</commonality> <!-- 1 in 10 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A1_M203_30Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.45</Mass> <!-- M203 + 20 to 30Rnd -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>M16A1</label>
+								<commandIcon>CGF1/Gun/Variant/M16A1_M203_30Rnd</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.5</warmupTime>
+								<range>20.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>M203</label>
+								<commandIcon>CGF1/Underbarrel/M203</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A1_M203_30Rnd_SD</defName>
+						<label>M16A1 M203 (30Rnd SD)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an M203 grenade launcher and has an attached suppressor, and uses a later production 30-round magazine.</description>
+						<commonality>0.02</commonality> <!-- 1 in 80 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A1_M203_30Rnd_SD</texPath>
+							<drawSize>1.15</drawSize>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.7</Mass> <!-- M203 + Suppressor + 20 to 30Rnd -->
+						</statOffsets>
+						<equippedStatOffsets>
+							<HuntingStealth>0.5</HuntingStealth> <!-- 0.5 for suppressors -->
+						</equippedStatOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
+								<muzzleFlashScale>-8</muzzleFlashScale>
+								<label>M16A1</label>
+								<commandIcon>CGF1/Gun/Variant/M16A1_M203_SD</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.5</warmupTime>
+								<range>20.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>M203</label>
+								<commandIcon>CGF1/Underbarrel/M203</commandIcon>
+							</li>
+						</addedVerbs>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>CGF1_MF_StandardMuzzleFlashSD</def>
+								<drawSize>(0.3,0.3)</drawSize>
+								<offsets>
+									<li>(0.77,0.06)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A1_XM148</defName>
+						<label>M16A1 XM148</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an XM148 grenade launcher.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A1_XM148</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.35</Mass> <!-- XM148 Grenade Launcher -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>M16A1</label>
+								<commandIcon>CGF1/Gun/Variant/M16A1_XM148</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.5</warmupTime>
+								<range>20.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>XM148</label>
+								<commandIcon>CGF1/Underbarrel/XM148</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A1_XM148_30Rnd</defName>
+						<label>M16A1 XM148 (30Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an XM148 grenade launcher and uses a later production 30-round magazine.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A1_XM148_30Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.4</Mass> <!-- XM148 Grenade Launcher + 20 to 30Rnd -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>M16A1</label>
+								<commandIcon>CGF1/Gun/Variant/M16A1_XM148_30Rnd</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.5</warmupTime>
+								<range>20.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>XM148</label>
+								<commandIcon>CGF1/Underbarrel/XM148</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A1_CienerOU</defName>
+						<label>M16A1 Ciener O/U</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a Ciener O/U shotgun.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A1_CienerOU</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>2.4</Mass> <!-- Ciener O/U -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>M16A1</label>
+								<commandIcon>CGF1/Gun/Variant/M16A1_CienerOU</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_12Gauge_Slug_Shotgun</defaultProjectile>
+								<warmupTime>1</warmupTime>
+								<range>12.9</range>
+								<soundCast>CGF1_MWP_SFX_Shotgun1</soundCast>
+								<soundCastTail>GunTail_Heavy</soundCastTail>
+								<muzzleFlashScale>9</muzzleFlashScale>
+								<label>Ciener O/U</label>
+								<commandIcon>CGF1/Underbarrel/CienerUltimate_OU</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A1_CienerOU_30Rnd</defName>
+						<label>M16A1 Ciener O/U (30Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a Ciener O/U shotgun and uses a later production 30-round magazine.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A1_CienerOU_30Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>2.45</Mass> <!-- Ciener O/U + 20 to 30Rnd -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>M16A1</label>
+								<commandIcon>CGF1/Gun/Variant/M16A1_CienerOU_30Rnd</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_12Gauge_Slug_Shotgun</defaultProjectile>
+								<warmupTime>1</warmupTime>
+								<range>12.9</range>
+								<soundCast>CGF1_MWP_SFX_Shotgun1</soundCast>
+								<soundCastTail>GunTail_Heavy</soundCastTail>
+								<muzzleFlashScale>9</muzzleFlashScale>
+								<label>Ciener O/U</label>
+								<commandIcon>CGF1/Underbarrel/CienerUltimate_OU</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+				</variants>
 			</li>
-		</verbs>
-		<tools>
-			<li>
-				<label>stock</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>10</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-			<li>
-				<label>bayonet</label>
-				<capacities>
-					<li>Stab</li>
-				</capacities>
-				<power>13</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-		</tools>
-		<modExtensions>
-			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
-				<def>MF_StandardMuzzleFalshThree</def>
-				<drawSize>(0.8,0.8)</drawSize>
-				<offsets>
-					<li>(0.65,0.07)</li>
-				</offsets>
-			</li>
-		</modExtensions>
-		<generateCommonality>0.05</generateCommonality> <!-- Uncommon -->
-		<thingSetMakerTags Inherit="False"/>
-	</ThingDef>
-	
-	<ThingDef ParentName="CGF1_MWP_AssaultRifle_T1">
-		<defName>CGF1_MWP_M16A1_SD_</defName>
-		<label>M16A1 (SD)</label>
-		<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.</description>
-		<graphicData>
-			<texPath>CGF1/Gun/UP/M16A1_SD</texPath>
-			<drawSize>1.15</drawSize>
-		</graphicData>
-		<recipeMaker>
-			<recipeUsers>
-				<li>CGF1_MWP_Building_Gunsmith</li>
-			</recipeUsers>
-			<researchPrerequisite>CGF1_MWP_Research_T8_AtomicAgeFirearms</researchPrerequisite>
-			<skillRequirements>
-				<Crafting>6</Crafting>
-			</skillRequirements>
-		</recipeMaker>
-		<costList>
-			<Steel>60</Steel>
-			<ComponentIndustrial>7</ComponentIndustrial>
-		</costList>
-		<statBases>
-			<WorkToMake>40000</WorkToMake>
-			<Mass>3.8</Mass>
-			<AccuracyTouch>0.60</AccuracyTouch>
-			<AccuracyShort>0.60</AccuracyShort>
-			<AccuracyMedium>0.55</AccuracyMedium>
-			<AccuracyLong>0.50</AccuracyLong>
-			<RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
-		</statBases>
-		<equippedAngleOffset>40</equippedAngleOffset>
-		<weaponTags>
-			<li>CGF1_AR_Military</li>
-			<li>CGF1_AR_Military_SpecOps</li>
-		</weaponTags>
-		<tradeTags Inherit="False"/>
-		<equippedStatOffsets>
-			<HuntingStealth>0.3</HuntingStealth>
-		</equippedStatOffsets>
-		<verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>CGF1_MWP_Bullet_556x45mmNATO_Auto</defaultProjectile>
-				<warmupTime>1</warmupTime>
-				<range>30.9</range>
-				<burstShotCount>4</burstShotCount>
-				<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
-				<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
-				<muzzleFlashScale>1</muzzleFlashScale>
-			</li>
-		</verbs>
-		<tools>
-			<li>
-				<label>stock</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>10</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-			<li>
-				<label>barrel</label>
-				<capacities>
-					<li>Blunt</li>
-					<li>Poke</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-		</tools>
-		<generateCommonality>0.20</generateCommonality> <!-- Common -->
-		<thingSetMakerTags Inherit="False"/>
+		</comps>
 	</ThingDef>
 	
 </Defs>

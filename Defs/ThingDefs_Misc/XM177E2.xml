@@ -87,83 +87,552 @@
 		<thingSetMakerTags>
 			<li>CGF1_GunsGalore_RewardAncient_Common</li>
 		</thingSetMakerTags>
-	</ThingDef>
-	
-	<ThingDef ParentName="CGF1_MWP_AssaultRifle_Carbine_T1">
-		<defName>CGF1_MWP_XM177E2_SD_</defName>
-		<label>XM177E2 (SD)</label>
-		<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.</description>
-		<graphicData>
-			<texPath>CGF1/Gun/UP/XM177E2_SD</texPath>
-			<drawSize>1.07</drawSize>
-		</graphicData>
-		<recipeMaker>
-			<recipeUsers>
-				<li>CGF1_MWP_Building_Gunsmith</li>
-			</recipeUsers>
-			<researchPrerequisite>CGF1_MWP_Research_T8_AtomicAgeFirearms</researchPrerequisite>
-			<skillRequirements>
-				<Crafting>6</Crafting>
-			</skillRequirements>
-		</recipeMaker>
-		<costList>
-			<Steel>50</Steel>
-			<ComponentIndustrial>7</ComponentIndustrial>
-		</costList>
-		<statBases>
-			<WorkToMake>40000</WorkToMake>
-			<Mass>3.3</Mass>
-			<AccuracyTouch>0.65</AccuracyTouch>
-			<AccuracyShort>0.60</AccuracyShort>
-			<AccuracyMedium>0.55</AccuracyMedium>
-			<AccuracyLong>0.45</AccuracyLong>
-			<RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
-		</statBases>
-		<equippedAngleOffset>40</equippedAngleOffset>
-		<weaponTags>
-			<li>CGF1_AR_Military</li>
-			<li>CGF1_AR_Military_SpecOps</li>
-		</weaponTags>
-		<tradeTags Inherit="False">
-			<li>CGF1_GunsGalore_NoSpawn</li>
-		</tradeTags>
-		<equippedStatOffsets>
-			<HuntingStealth>0.3</HuntingStealth>
-		</equippedStatOffsets>
-		<verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>CGF1_MWP_Bullet_556x45mmNATO_Auto</defaultProjectile>
-				<warmupTime>0.9</warmupTime>
-				<range>30.9</range>
-				<burstShotCount>4</burstShotCount>
-				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-				<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
-				<muzzleFlashScale>1</muzzleFlashScale>
+		
+		<comps>
+			<li Class="WeaponVariants.CompProperties_WeaponVariants">
+				<generateBaseWeapon>true</generateBaseWeapon>
+				<variants>
+					<li>
+						<defName>CGF1_MWP_XM177E2_SD</defName>
+						<label>XM177E2 (SD)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has an attached suppressor.</description>
+						<commonality>0.1</commonality> <!-- 1 in 10 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/XM177E2_SD</texPath>
+							<drawSize>1.15</drawSize>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.2</Mass> <!-- Suppressor -->
+						</statOffsets>
+						<equippedStatOffsets>
+							<HuntingStealth>0.5</HuntingStealth> <!-- 0.5 for suppressors -->
+						</equippedStatOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
+								<muzzleFlashScale>-8</muzzleFlashScale>
+							</li>
+						</verbModifiers>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>CGF1_MF_StandardMuzzleFlashSD</def>
+								<drawSize>(0.3,0.3)</drawSize>
+								<offsets>
+									<li>(0.7,0.05)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_XM177E2_20Rnd</defName>
+						<label>XM177E2 (20Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant uses a 20-round magazine.</description>
+						<commonality>0.1</commonality> <!-- 1 in 10 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/XM177E2_20Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>-0.05</Mass> <!-- 30 to 20Rnd -->
+						</statOffsets>
+					</li>
+					<li>
+						<defName>CGF1_MWP_XM177E2_100RndCMAG</defName>
+						<label>XM177E2 (100Rnd CMAG)</label>
+						<description>Caliber: 5.56x45mm NATO. 100-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a 100-round Beta C-Mag.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/XM177E2_100RndCMAG</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.75</Mass> <!-- 30 to 100Rnd CMAG -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<burstShotCount>2</burstShotCount> <!-- +2 from drum mag -->
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_XM177E2_180Rnd</defName>
+						<label>XM177E2 (180Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 180-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a 180-round drum made by combining two 90-round MWG "Ninety Rounder" magazines.</description>
+						<commonality>0.01</commonality> <!-- 1 in 100 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/XM177E2_180Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.75</Mass> <!-- 30 to 180Rnd -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<burstShotCount>2</burstShotCount> <!-- +2 from drum mag -->
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_XM177E2_ANPVS2</defName>
+						<label>XM177E2 (AN/PVS-2)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached AN/PVS-2 "Starlight" scope.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/XM177E2_ANPVS2</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>2.7</Mass> <!-- AN/PVS-2 -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_XM177E2_Aimpoint</defName>
+						<label>XM177E2 (Aimpoint)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached Aimpoint 3000 red dot optic.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/XM177E2_Aimpoint</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.1</Mass> <!-- Aimpoint 3000 (0.1) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<warmupTime>-0.05</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_XM177E2_Scope</defName>
+						<label>XM177E2 (Scope)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached Colt 3x20 scope.</description>
+						<commonality>0.1</commonality> <!-- 1 in 10 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/XM177E2_Scope</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.1</Mass> <!-- Colt 3x20 (0.1) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_XM177E2_Scope_SD</defName>
+						<label>XM177E2 (Scope SD)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached Colt 3x20 scope and suppressor.</description>
+						<commonality>0.1</commonality> <!-- 1 in 10 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/XM177E2_Scope_SD</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.31</Mass> <!-- Colt 3x20 (0.1) + Suppressor -->
+						</statOffsets>
+						<equippedStatOffsets>
+							<HuntingStealth>0.5</HuntingStealth> <!-- 0.5 for suppressors -->
+						</equippedStatOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+								<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
+								<muzzleFlashScale>-8</muzzleFlashScale>
+							</li>
+						</verbModifiers>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>CGF1_MF_StandardMuzzleFlashSD</def>
+								<drawSize>(0.3,0.3)</drawSize>
+								<offsets>
+									<li>(0.7,0.05)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_XM177E2_M203</defName>
+						<label>XM177E2 M203</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an M203 grenade launcher.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/XM177E2_M203</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.4</Mass> <!-- M203 -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>XM177E2</label>
+								<commandIcon>CGF1/Gun/Variant/XM177E2_M203</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.5</warmupTime>
+								<range>20.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>M203</label>
+								<commandIcon>CGF1/Underbarrel/M203</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_XM177E2_M203_20Rnd</defName>
+						<label>XM177E2 M203 (20Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an M203 grenade launcher and uses a 20-round magazine.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 --> 
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/XM177E2_M203_20Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.35</Mass> <!-- M203 + 30 to 20Rnd -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>XM177E2</label>
+								<commandIcon>CGF1/Gun/Variant/XM177E2_M203_20Rnd</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.5</warmupTime>
+								<range>20.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>M203</label>
+								<commandIcon>CGF1/Underbarrel/M203</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_XM177E2_M203_Scope</defName>
+						<label>XM177E2 M203 (Scope)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an M203 grenade launcher and has an attached Colt 3x20 scope.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/XM177E2_M203_Scope</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.5</Mass> <!-- M203 + Colt 3x20 (0.1) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+								<label>XM177E2</label>
+								<commandIcon>CGF1/Gun/Variant/XM177E2_M203_Scope</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.5</warmupTime>
+								<range>20.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>M203</label>
+								<commandIcon>CGF1/Underbarrel/M203</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_XM177E2_M203GH</defName>
+						<label>XM177E2 M203 GH</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an M203 grenade launcher with a specialized grenadier handguard.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/XM177E2_M203GH</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.4</Mass> <!-- M203 -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>XM177E2</label>
+								<commandIcon>CGF1/Gun/Variant/XM177E2_M203GH</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.5</warmupTime>
+								<range>20.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>M203</label>
+								<commandIcon>CGF1/Underbarrel/M203</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_XM177E2_XM148</defName>
+						<label>XM177E2 XM148</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an XM148 grenade launcher.</description>
+						<commonality>0.08</commonality> <!-- 1 in 12.5 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/XM177E2_XM148</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.35</Mass> <!-- XM148 Grenade Launcher -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>XM177E2</label>
+								<commandIcon>CGF1/Gun/Variant/XM177E2_XM148</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.5</warmupTime>
+								<range>20.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>XM148</label>
+								<commandIcon>CGF1/Underbarrel/XM148</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_XM177E2_XM148_20Rnd</defName>
+						<label>XM177E2 XM148 (20Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an XM148 grenade launcher and uses a 20-round magazine.</description>
+						<commonality>0.08</commonality> <!-- 1 in 12.5 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/XM177E2_XM148_20Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.3</Mass> <!-- XM148 Grenade Launcher (1.35) + 30 to 20Rnd -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>XM177E2</label>
+								<commandIcon>CGF1/Gun/Variant/XM177E2_XM148</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.5</warmupTime>
+								<range>20.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>XM148</label>
+								<commandIcon>CGF1/Underbarrel/XM148</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_XM177E2_XM148_Scope</defName>
+						<label>XM177E2 XM148 (Scope)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an XM148 grenade launcher and has an attached Colt 3x20 Scope.</description>
+						<commonality>0.0625</commonality> <!-- 1 in 16 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/XM177E2_XM148_Scope</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.45</Mass> <!-- XM148 Grenade Launcher (1.35) + Colt 3x20 (0.1) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+								<label>XM177E2</label>
+								<commandIcon>CGF1/Gun/Variant/XM177E2_XM148_Scope</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.5</warmupTime>
+								<range>20.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>XM148</label>
+								<commandIcon>CGF1/Underbarrel/XM148</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_XM177E2_CienerOU</defName>
+						<label>XM177E2 Ciener O/U</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a Ciener O/U shotgun.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/XM177E2_CienerOU</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>2.4</Mass> <!-- Ciener O/U -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>XM177E2</label>
+								<commandIcon>CGF1/Gun/Variant/XM177E2_CienerOU</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_12Gauge_Slug_Shotgun</defaultProjectile>
+								<warmupTime>1</warmupTime>
+								<range>12.9</range>
+								<soundCast>CGF1_MWP_SFX_Shotgun1</soundCast>
+								<soundCastTail>GunTail_Heavy</soundCastTail>
+								<muzzleFlashScale>9</muzzleFlashScale>
+								<label>Ciener O/U</label>
+								<commandIcon>CGF1/Underbarrel/CienerUltimate_OU</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_XM177E2_Masterkey</defName>
+						<label>XM177E2 Masterkey</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a KAC Masterkey shotgun.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/XM177E2_Masterkey</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>2.0</Mass> <!-- KAC Masterkey -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>XM177E2</label>
+								<commandIcon>CGF1/Gun/Variant/XM177E2_Masterkey</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_12Gauge_Slug_Shotgun</defaultProjectile>
+								<warmupTime>1</warmupTime>
+								<range>12.9</range>
+								<soundCast>CGF1_MWP_SFX_Shotgun_Auto1</soundCast>
+								<soundCastTail>GunTail_Heavy</soundCastTail>
+								<muzzleFlashScale>9</muzzleFlashScale>
+								<label>KAC Masterkey</label>
+								<commandIcon>CGF1/Underbarrel/Masterkey</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_XM177E2_Masterkey_20Rnd</defName>
+						<label>XM177E2 Masterkey (20Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a KAC Masterkey shotgun.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/XM177E2_Masterkey_20Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.95</Mass> <!-- KAC Masterkey + 30 to 20Rnd -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>XM177E2</label>
+								<commandIcon>CGF1/Gun/Variant/XM177E2_Masterkey_20Rnd</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_12Gauge_Slug_Shotgun</defaultProjectile>
+								<warmupTime>1</warmupTime>
+								<range>12.9</range>
+								<soundCast>CGF1_MWP_SFX_Shotgun_Auto1</soundCast>
+								<soundCastTail>GunTail_Heavy</soundCastTail>
+								<muzzleFlashScale>9</muzzleFlashScale>
+								<label>KAC Masterkey</label>
+								<commandIcon>CGF1/Underbarrel/Masterkey</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+				</variants>
 			</li>
-		</verbs>
-		<tools>
-			<li>
-				<label>stock</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>10</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-			<li>
-				<label>barrel</label>
-				<capacities>
-					<li>Blunt</li>
-					<li>Poke</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-		</tools>
-		<generateCommonality>0.05</generateCommonality> <!-- Uncommon -->
-		<thingSetMakerTags Inherit="False"/>
+		</comps>
 	</ThingDef>
 	
 	

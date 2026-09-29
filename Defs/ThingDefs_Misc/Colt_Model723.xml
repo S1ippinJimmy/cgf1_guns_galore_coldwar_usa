@@ -108,7 +108,7 @@
 							<li>
 								<verbIndex>0</verbIndex>
 								<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
-								<muzzleFlashScale>1</muzzleFlashScale>
+								<muzzleFlashScale>-8</muzzleFlashScale>
 							</li>
 						</verbModifiers>
 						<modExtensions>
@@ -160,7 +160,7 @@
 							<texPath>CGF1/Gun/Variant/Colt_Model723_180Rnd</texPath>
 						</graphicData>
 						<statOffsets>
-							<Mass>1.8</Mass> <!-- 20 to 180Rnd -->
+							<Mass>1.75</Mass> <!-- 30 to 180Rnd -->
 						</statOffsets>
 						<verbModifiers>
 							<li>
@@ -202,7 +202,7 @@
 					<li>
 						<defName>CGF1_MWP_Colt_Model723_Aimpoint_FL_SD</defName>
 						<label>Colt Model 723 (Aimpoint FL SD)</label>
-						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached Aimpoint 3000 red dot optic and has been fitted with a flashlight.</description>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached Aimpoint 3000 red dot optic and has been fitted with a flashlight and a suppressor.</description>
 						<commonality>0.08</commonality> <!-- 1 in 12.5 -->
 						<graphicData>
 							<texPath>CGF1/Gun/Variant/Colt_Model723_Aimpoint_FL_SD</texPath>
@@ -218,7 +218,7 @@
 								<verbIndex>0</verbIndex>
 								<warmupTime>-0.05</warmupTime>
 								<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
-								<muzzleFlashScale>1</muzzleFlashScale>
+								<muzzleFlashScale>-8</muzzleFlashScale>
 							</li>
 						</verbModifiers>
 						<modExtensions>
@@ -329,7 +329,7 @@
 							<li>
 								<verbIndex>0</verbIndex>
 								<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
-								<muzzleFlashScale>1</muzzleFlashScale>
+								<muzzleFlashScale>-8</muzzleFlashScale>
 							</li>
 						</verbModifiers>
 						<modExtensions>
@@ -379,7 +379,7 @@
 								<verbIndex>0</verbIndex>
 								<warmupTime>-0.05</warmupTime>
 								<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
-								<muzzleFlashScale>1</muzzleFlashScale>
+								<muzzleFlashScale>-8</muzzleFlashScale>
 							</li>
 						</verbModifiers>
 						<modExtensions>

@@ -87,84 +87,108 @@
 		<thingSetMakerTags>
 			<li>CGF1_GunsGalore_RewardAncient_Common</li>
 		</thingSetMakerTags>
+		
+		<comps>
+			<li Class="WeaponVariants.CompProperties_WeaponVariants">
+				<generateBaseWeapon>true</generateBaseWeapon>
+				<variants>
+					<li>
+						<defName>CGF1_MWP_XM177E1_SD</defName>
+						<label>XM177E1 (SD)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has an attached suppressor.</description>
+						<commonality>0.1</commonality> <!-- 1 in 10 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/XM177E1_SD</texPath>
+							<drawSize>1.15</drawSize>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.2</Mass> <!-- Suppressor -->
+						</statOffsets>
+						<equippedStatOffsets>
+							<HuntingStealth>0.5</HuntingStealth> <!-- 0.5 for suppressors -->
+						</equippedStatOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
+								<muzzleFlashScale>-8</muzzleFlashScale>
+							</li>
+						</verbModifiers>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>CGF1_MF_StandardMuzzleFlashSD</def>
+								<drawSize>(0.3,0.3)</drawSize>
+								<offsets>
+									<li>(0.7,0.05)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_XM177E1_25Rnd</defName>
+						<label>XM177E1 (25Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 25-round detachable mag. Select-Fire.\n\nThis variant uses a rare, early 25-round AR-15 test magazine.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/XM177E1_25Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.02</Mass> <!-- 20 to 25Rnd -->
+						</statOffsets>
+					</li>
+					<li>
+						<defName>CGF1_MWP_XM177E1_30Rnd</defName>
+						<label>XM177E1 (30Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant uses a later production 30-round magazine.</description>
+						<commonality>0.1</commonality> <!-- 1 in 10 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/XM177E1_30Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.05</Mass> <!-- 20 to 30Rnd -->
+						</statOffsets>
+					</li>
+					<li>
+						<defName>CGF1_MWP_XM177E1_ANPVS2</defName>
+						<label>XM177E1 (AN/PVS-2)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has an attached AN/PVS-2 "Starlight" scope.</description>
+						<commonality>0.04</commonality> <!-- 1 in 25 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/XM177E1_ANPVS2</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>2.7</Mass> <!-- AN/PVS-2 -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_XM177E1_Scope</defName>
+						<label>XM177E1 (Scope)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has an attached Colt 3x20 scope.</description>
+						<commonality>0.08</commonality> <!-- 1 in 12.5 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/XM177E1_Scope</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.1</Mass> <!-- Colt 3x20 (0.1) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+				</variants>
+			</li>
+		</comps>
 	</ThingDef>
-	
-	<ThingDef ParentName="CGF1_MWP_AssaultRifle_Carbine_T1">
-		<defName>CGF1_MWP_XM177E1_SD_</defName>
-		<label>XM177E1 (SD)</label>
-		<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.</description>
-		<graphicData>
-			<texPath>CGF1/Gun/UP/XM177E1_SD</texPath>
-			<drawSize>1.07</drawSize>
-		</graphicData>
-		<recipeMaker>
-			<recipeUsers>
-				<li>CGF1_MWP_Building_Gunsmith</li>
-			</recipeUsers>
-			<researchPrerequisite>CGF1_MWP_Research_T8_AtomicAgeFirearms</researchPrerequisite>
-			<skillRequirements>
-				<Crafting>6</Crafting>
-			</skillRequirements>
-		</recipeMaker>
-		<costList>
-			<Steel>50</Steel>
-			<ComponentIndustrial>7</ComponentIndustrial>
-		</costList>
-		<statBases>
-			<WorkToMake>40000</WorkToMake>
-			<Mass>3.2</Mass>
-			<AccuracyTouch>0.65</AccuracyTouch>
-			<AccuracyShort>0.60</AccuracyShort>
-			<AccuracyMedium>0.55</AccuracyMedium>
-			<AccuracyLong>0.45</AccuracyLong>
-			<RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
-		</statBases>
-		<equippedAngleOffset>40</equippedAngleOffset>
-		<weaponTags>
-			<li>CGF1_AR_Military</li>
-			<li>CGF1_AR_Military_SpecOps</li>
-		</weaponTags>
-		<tradeTags Inherit="False">
-			<li>CGF1_GunsGalore_NoSpawn</li>
-		</tradeTags>
-		<equippedStatOffsets>
-			<HuntingStealth>0.3</HuntingStealth>
-		</equippedStatOffsets>
-		<verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>CGF1_MWP_Bullet_556x45mmNATO_Auto</defaultProjectile>
-				<warmupTime>0.9</warmupTime>
-				<range>30.9</range>
-				<burstShotCount>4</burstShotCount>
-				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-				<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
-				<muzzleFlashScale>1</muzzleFlashScale>
-			</li>
-		</verbs>
-		<tools>
-			<li>
-				<label>stock</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>10</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-			<li>
-				<label>barrel</label>
-				<capacities>
-					<li>Blunt</li>
-					<li>Poke</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-		</tools>
-		<generateCommonality>0.05</generateCommonality> <!-- Uncommon -->
-		<thingSetMakerTags Inherit="False"/>
-	</ThingDef>
-	
 	
 </Defs>

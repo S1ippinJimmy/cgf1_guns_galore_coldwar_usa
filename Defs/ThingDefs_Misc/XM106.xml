@@ -86,6 +86,32 @@
 		<thingSetMakerTags>
 			<li>CGF1_GunsGalore_RewardAncient_Prototype</li>
 		</thingSetMakerTags>
+		
+		<comps>
+			<li Class="WeaponVariants.CompProperties_WeaponVariants">
+				<generateBaseWeapon>true</generateBaseWeapon>
+				<variants>
+					<li>
+						<defName>CGF1_MWP_XM106_100RndCMAG</defName>
+						<label>XM106 (100Rnd CMAG)</label>
+						<description>Caliber: 5.56x45mm NATO. 100-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a 100-round Beta C-Mag.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/XM106_100RndCMAG</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.75</Mass> <!-- 30 to 100Rnd CMAG -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<burstShotCount>2</burstShotCount> <!-- +2 from drum mag -->
+							</li>
+						</verbModifiers>
+					</li>
+				</variants>
+			</li>
+		</comps>
 	</ThingDef>
 	
 </Defs>

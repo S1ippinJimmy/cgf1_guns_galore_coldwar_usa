@@ -210,7 +210,7 @@
 								<range>3</range>
 								<warmupTime>0.15</warmupTime>
 								<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
-								<muzzleFlashScale>1</muzzleFlashScale>
+								<muzzleFlashScale>-8</muzzleFlashScale>
 							</li>
 						</verbModifiers>
 						<modExtensions>
@@ -262,7 +262,7 @@
 						</addedVerbs>
 					</li>
 					<li>
-						<defName>CGF1_MWP_Colt_Colt_Model727_M203_ANPVS2</defName>
+						<defName>CGF1_MWP_Colt_Model727_M203_ANPVS2</defName>
 						<label>Colt Model 727 M203 (AN/PVS-2)</label>
 						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an M203 grenade launcher and has an attached AN/PVS-2 "Starlight" scope.</description>
 						<commonality>0.02</commonality> <!-- 1 in 50 -->
@@ -301,7 +301,7 @@
 						</addedVerbs>
 					</li>
 					<li>
-						<defName>CGF1_MWP_Colt_Colt_Model727_M203_Aimpoint</defName>
+						<defName>CGF1_MWP_Colt_Model727_M203_Aimpoint</defName>
 						<label>Colt Model 727 M203 (Aimpoint)</label>
 						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an M203 grenade launcher and has an attached Aimpoint 3000 red dot optic.</description>
 						<commonality>0.1</commonality> <!-- 1 in 10 -->
@@ -340,7 +340,7 @@
 						</addedVerbs>
 					</li>
 					<li>
-						<defName>CGF1_MWP_Colt_Colt_Model727_M203_Scope</defName>
+						<defName>CGF1_MWP_Colt_Model727_M203_Scope</defName>
 						<label>Colt Model 727 M203 (Scope)</label>
 						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an M203 grenade launcher and has an attached Aimpoint 3000 red dot optic.</description>
 						<commonality>0.1</commonality> <!-- 1 in 10 -->
@@ -421,7 +421,7 @@
 							<texPath>CGF1/Gun/Variant/Colt_Model653_Masterkey</texPath>
 						</graphicData>
 						<statOffsets>
-							<Mass>2.0</Mass> <!-- KAC Masterkey-->
+							<Mass>2.0</Mass> <!-- KAC Masterkey -->
 						</statOffsets>
 						<verbModifiers>
 							<li>

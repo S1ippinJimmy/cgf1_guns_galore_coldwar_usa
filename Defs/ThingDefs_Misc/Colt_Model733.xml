@@ -108,7 +108,7 @@
 							<li>
 								<verbIndex>0</verbIndex>
 								<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
-								<muzzleFlashScale>1</muzzleFlashScale>
+								<muzzleFlashScale>-8</muzzleFlashScale>
 							</li>
 						</verbModifiers>
 					</li>
@@ -151,7 +151,7 @@
 							<texPath>CGF1/Gun/Variant/Colt_Model733_180Rnd</texPath>
 						</graphicData>
 						<statOffsets>
-							<Mass>1.8</Mass> <!-- 20 to 180Rnd -->
+							<Mass>1.75</Mass> <!-- 30 to 180Rnd -->
 						</statOffsets>
 						<verbModifiers>
 							<li>
@@ -228,7 +228,7 @@
 								<verbIndex>0</verbIndex>
 								<warmupTime>-0.05</warmupTime>
 								<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
-								<muzzleFlashScale>1</muzzleFlashScale>
+								<muzzleFlashScale>-8</muzzleFlashScale>
 							</li>
 						</verbModifiers>
 					</li>
@@ -330,7 +330,7 @@
 							<li>
 								<verbIndex>0</verbIndex>
 								<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
-								<muzzleFlashScale>1</muzzleFlashScale>
+								<muzzleFlashScale>-8</muzzleFlashScale>
 							</li>
 						</verbModifiers>
 					</li>
@@ -371,7 +371,7 @@
 								<verbIndex>0</verbIndex>
 								<warmupTime>-0.05</warmupTime>
 								<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
-								<muzzleFlashScale>1</muzzleFlashScale>
+								<muzzleFlashScale>-8</muzzleFlashScale>
 							</li>
 						</verbModifiers>
 					</li>

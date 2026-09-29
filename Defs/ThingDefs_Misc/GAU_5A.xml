@@ -24,7 +24,7 @@
 		</costList>
 		<statBases>
 			<WorkToMake>40000</WorkToMake>
-			<Mass>3.05</Mass>
+			<Mass>3.0</Mass>
 			<AccuracyTouch>0.65</AccuracyTouch>
 			<AccuracyShort>0.60</AccuracyShort>
 			<AccuracyMedium>0.55</AccuracyMedium>
@@ -33,6 +33,7 @@
 		</statBases>
 		<equippedAngleOffset>40</equippedAngleOffset>
 		<weaponTags>
+			<li>CGF1_AR_Civilian</li>
 			<li>CGF1_AR_Military</li>
 			<li>CGF1_AR_Military_Advanced</li>
 		</weaponTags>
@@ -78,11 +79,12 @@
 				<def>MF_StandardMuzzleFalsh</def>
 				<drawSize>(0.6,0.6)</drawSize>
 				<offsets>
-					<li>(0.52,0.05)</li>
+					<li>(0.48,0.05)</li>
 				</offsets>
 			</li>
 		</modExtensions>
 		<generateCommonality>0.05</generateCommonality> <!-- Uncommon -->
 	</ThingDef>
+	
 	
 </Defs>
