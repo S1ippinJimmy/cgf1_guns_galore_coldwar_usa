@@ -163,6 +163,38 @@
 						</modExtensions>
 					</li>
 					<li>
+						<defName>CGF1_MWP_M16_SionicsMAWA1</defName>
+						<label>M16 (Sionics MAW-A1)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has an attached Sionics MAW-A1 suppressor.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16_SionicsMAWA1</texPath>
+							<drawSize>1.2</drawSize>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.5</Mass> <!-- Sionics MAW-A1 Suppressor -->
+						</statOffsets>
+						<equippedStatOffsets>
+							<HuntingStealth>0.5</HuntingStealth> <!-- 0.5 for suppressors -->
+						</equippedStatOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
+								<muzzleFlashScale>-8</muzzleFlashScale>
+							</li>
+						</verbModifiers>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>CGF1_MF_StandardMuzzleFlashSD</def>
+								<drawSize>(0.3,0.3)</drawSize>
+								<offsets>
+									<li>(0.81,0.07)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
 						<defName>CGF1_MWP_M16_30Rnd</defName>
 						<label>M16 (30Rnd)</label>
 						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant uses a later production 30-round magazine.</description>

@@ -7,7 +7,7 @@
 		<description>Caliber: .30 Carbine. 30-round detachable mag. Select-Fire.</description>
 		<graphicData>
 			<texPath>CGF1/Gun/M2A1_Carbine_PW</texPath>
-			<drawSize>1.00</drawSize>
+			<drawSize>1.06</drawSize>
 		</graphicData>
 		<recipeMaker>
 			<recipeUsers>
@@ -35,6 +35,7 @@
 		<weaponTags>
 			<li>CGF1_AR_Civilian</li>
 			<li>CGF1_AR_Military</li>
+			<li>CGF1_AR_Military_Advanced</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>RangedLight</li>
@@ -79,9 +80,9 @@
 		<modExtensions>
 			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
 				<def>MF_StandardMuzzleFalsh</def>
-				<drawSize>(0.7,0.7)</drawSize>
+				<drawSize>(0.5,0.5)</drawSize>
 				<offsets>
-					<li>(0.52,0.05)</li>
+					<li>(0.52,0.06)</li>
 				</offsets>
 			</li>
 		</modExtensions>

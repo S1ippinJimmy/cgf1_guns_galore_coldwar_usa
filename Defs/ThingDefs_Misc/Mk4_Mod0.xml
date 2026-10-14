@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="CGF1_MWP_AssaultRifle_T1">
+		<defName>CGF1_MWP_Mk4_Mod0_</defName>
+		<label>Mk.4 Mod 0</label>
+		<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.</description>
+		<graphicData>
+			<texPath>CGF1/Gun/Mk4_Mod0</texPath>
+			<drawSize>1.15</drawSize>
+		</graphicData>
+		<recipeMaker>
+			<recipeUsers>
+				<li>CGF1_MWP_Building_Gunsmith</li>
+			</recipeUsers>
+			<researchPrerequisite>CGF1_MWP_Research_T8_AtomicAgeFirearms</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Steel>60</Steel>
+			<ComponentIndustrial>7</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<WorkToMake>45000</WorkToMake>
+			<Mass>4.0</Mass>
+			<AccuracyTouch>0.60</AccuracyTouch>
+			<AccuracyShort>0.60</AccuracyShort>
+			<AccuracyMedium>0.55</AccuracyMedium>
+			<AccuracyLong>0.50</AccuracyLong>
+			<RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		<weaponTags>
+			<li>CGF1_AR_Military</li>
+			<li>CGF1_AR_Military_Advanced</li>
+		</weaponTags>
+		<equippedStatOffsets>
+			<HuntingStealth>0.5</HuntingStealth> <!-- 0.5 for suppressors -->
+		</equippedStatOffsets>
+		<tradeTags>
+			<li>CGF1_GunsGalore_ColdWarUSA</li>
+			<li>CGF1_GunsGalore_ColdWarUSA_AR</li>
+		</tradeTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CGF1_MWP_Bullet_556x45mmNATO_Auto</defaultProjectile>
+				<warmupTime>1</warmupTime>
+				<range>30.9</range>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+				<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>1</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+				<def>CGF1_MF_StandardMuzzleFlashSD</def>
+				<drawSize>(0.3,0.3)</drawSize>
+				<offsets>
+					<li>(0.78,0.06)</li>
+				</offsets>
+			</li>
+		</modExtensions>
+		<generateCommonality>0.0125</generateCommonality> <!-- Rare -->
+		<thingSetMakerTags>
+			<li>CGF1_GunsGalore_RewardAncient_Prototype</li>
+		</thingSetMakerTags>
+		
+		<comps>
+			<li Class="WeaponVariants.CompProperties_WeaponVariants">
+				<generateBaseWeapon>true</generateBaseWeapon>
+				<variants>
+					<li>
+						<defName>CGF1_MWP_Mk4_Mod0_Camo</defName>
+						<label>Mk.4 Mod 0 (Camo)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has been painted with woodland camouflage.</description>
+						<commonality>0.1</commonality> <!-- 1 in 10 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Mk4_Mod0_Camo</texPath>
+						</graphicData>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Mk4_Mod0_Camo</defName>
+						<label>Mk.4 Mod 0 (Camo)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has been painted with woodland camouflage.</description>
+						<commonality>0.1</commonality> <!-- 1 in 10 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Mk4_Mod0_Camo</texPath>
+						</graphicData>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Mk4_Mod0_Scope</defName>
+						<label>Mk.4 Mod 0 (Scope)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has an attached Colt 3x20 scope.</description>
+						<commonality>0.08</commonality> <!-- 1 in 12.5 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Mk4_Mod0_Scope</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.1</Mass> <!-- Colt 3x20 (0.1) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Mk4_Mod0_Scope_Camo</defName>
+						<label>Mk.4 Mod 0 (Scope Camo)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has been painted with woodland camouflage and has an attached Colt 3x20 scope.</description>
+						<commonality>0.04</commonality> <!-- 1 in 25 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Mk4_Mod0_Scope_Camo</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.1</Mass> <!-- Colt 3x20 (0.1) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+				</variants>
+			</li>
+		</comps>
+	</ThingDef>
+	
+</Defs>

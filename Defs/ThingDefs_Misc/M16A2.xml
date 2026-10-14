@@ -269,6 +269,25 @@
 						</verbModifiers>
 					</li>
 					<li>
+						<defName>CGF1_MWP_M16A2_ANPVS4</defName>
+						<label>M16A2 (AN/PVS-4)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached AN/PVS-4 scope.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A2_ANPVS4</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.8</Mass> <!-- AN/PVS-4 -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
 						<defName>CGF1_MWP_M16A2_Aimpoint</defName>
 						<label>M16A2 (Aimpoint)</label>
 						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached Aimpoint 3000 red dot optic.</description>

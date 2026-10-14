@@ -83,7 +83,7 @@
 				</offsets>
 			</li>
 		</modExtensions>
-		<generateCommonality>0.05</generateCommonality> <!-- Uncommon -->
+		<generateCommonality>0.10</generateCommonality> <!-- Average -->
 		<thingSetMakerTags>
 			<li>CGF1_GunsGalore_RewardAncient_Common</li>
 		</thingSetMakerTags>
@@ -228,6 +228,80 @@
 							<li>
 								<verbIndex>0</verbIndex>
 								<burstShotCount>2</burstShotCount> <!-- +2 from drum mag -->
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A3_150Rnd</defName>
+						<label>M16A3 (150Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 150-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a 150-round Armatac SAW-MAG.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A2_150Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.35</Mass> <!-- 30 to 150Rnd -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<burstShotCount>2</burstShotCount> <!-- +2 from drum mag -->
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A3_180Rnd</defName>
+						<label>M16A3 (180Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 180-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a 180-round drum made by combining two 90-round MWG "Ninety Rounder" magazines.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A2_180Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.75</Mass> <!-- 30 to 180Rnd -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<burstShotCount>2</burstShotCount> <!-- +2 from drum mag -->
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A3_ANPVS2</defName>
+						<label>M16A3 (AN/PVS-2)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached AN/PVS-2 "Starlight" scope.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A2_ANPVS2</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>2.7</Mass> <!-- AN/PVS-2 -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M16A3_ANPVS4</defName>
+						<label>M16A3 (AN/PVS-4)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached AN/PVS-4 scope.</description>
+						<commonality>0.04</commonality> <!-- 1 in 25 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M16A2_ANPVS4</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.8</Mass> <!-- AN/PVS-4 -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
 							</li>
 						</verbModifiers>
 					</li>

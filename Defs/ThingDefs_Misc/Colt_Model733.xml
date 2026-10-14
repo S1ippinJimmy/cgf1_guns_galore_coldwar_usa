@@ -96,7 +96,6 @@
 						<commonality>0.1</commonality> <!-- 1 in 10 -->
 						<graphicData>
 							<texPath>CGF1/Gun/Variant/Colt_Model733_SD</texPath>
-							<drawSize>1.15</drawSize>
 						</graphicData>
 						<statOffsets>
 							<Mass>0.2</Mass> <!-- Suppressor -->
@@ -111,6 +110,15 @@
 								<muzzleFlashScale>-8</muzzleFlashScale>
 							</li>
 						</verbModifiers>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>CGF1_MF_StandardMuzzleFlashSD</def>
+								<drawSize>(0.3,0.3)</drawSize>
+								<offsets>
+									<li>(0.7,0.05)</li>
+								</offsets>
+							</li>
+						</modExtensions>
 					</li>
 					<li>
 						<defName>CGF1_MWP_Colt_Model733_20Rnd</defName>
@@ -123,6 +131,42 @@
 						<statOffsets>
 							<Mass>-0.05</Mass> <!-- 30 to 20Rnd -->
 						</statOffsets>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model733_60Rnd</defName>
+						<label>Colt Model 733 (60Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 60-round detachable mag. Select-Fire.\n\nThis variant uses a Surefire MAG5-60 quad-stack magazine.</description>
+						<commonality>0.025</commonality> <!-- 1 in 40 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model733_60Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.45</Mass> <!-- 30 to 60Rnd Surefire -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<burstShotCount>2</burstShotCount> <!-- +2 from drum mag -->
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_Colt_Model733_100Rnd</defName>
+						<label>Colt Model 733 (100Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 100-round detachable mag. Select-Fire.\n\nThis variant uses a Surefire MAG5-100 quad-stack magazine.</description>
+						<commonality>0.025</commonality> <!-- 1 in 40 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/Colt_Model733_100Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.7</Mass> <!-- 30 to 100Rnd Surefire -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<burstShotCount>2</burstShotCount> <!-- +2 from drum mag -->
+							</li>
+						</verbModifiers>
 					</li>
 					<li>
 						<defName>CGF1_MWP_Colt_Model733_100RndCMAG</defName>
@@ -231,6 +275,15 @@
 								<muzzleFlashScale>-8</muzzleFlashScale>
 							</li>
 						</verbModifiers>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>CGF1_MF_StandardMuzzleFlashSD</def>
+								<drawSize>(0.3,0.3)</drawSize>
+								<offsets>
+									<li>(0.7,0.05)</li>
+								</offsets>
+							</li>
+						</modExtensions>
 					</li>
 					<li>
 						<defName>CGF1_MWP_Colt_Model733_M203</defName>
@@ -333,6 +386,15 @@
 								<muzzleFlashScale>-8</muzzleFlashScale>
 							</li>
 						</verbModifiers>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>CGF1_MF_StandardMuzzleFlashSD</def>
+								<drawSize>(0.3,0.3)</drawSize>
+								<offsets>
+									<li>(0.7,0.05)</li>
+								</offsets>
+							</li>
+						</modExtensions>
 					</li>
 					<li>
 						<defName>CGF1_MWP_Colt_Model733GS_Aimpoint_FL</defName>
@@ -374,6 +436,15 @@
 								<muzzleFlashScale>-8</muzzleFlashScale>
 							</li>
 						</verbModifiers>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>CGF1_MF_StandardMuzzleFlashSD</def>
+								<drawSize>(0.3,0.3)</drawSize>
+								<offsets>
+									<li>(0.7,0.05)</li>
+								</offsets>
+							</li>
+						</modExtensions>
 					</li>
 				</variants>
 			</li>

@@ -7,7 +7,7 @@
 		<description>Caliber: .30 Carbine. 15-round detachable mag. Semi-Automatic.</description>
 		<graphicData>
 			<texPath>CGF1/Gun/M1_Carbine_PW</texPath>
-			<drawSize>1.00</drawSize>
+			<drawSize>1.06</drawSize>
 		</graphicData>
 		<recipeMaker>
 			<recipeUsers>
@@ -35,6 +35,7 @@
 		<weaponTags>
 			<li>CGF1_Rifle_Civilian</li>
 			<li>CGF1_Rifle_Military</li>
+			<li>CGF1_Rifle_Military_Advanced</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>RangedLight</li>
@@ -53,6 +54,7 @@
 				<soundCast>CGF1_MWP_SFX_Rifle_Semi5</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
+				<label>M1 Carbine</label>
 			</li>
 		</verbs>
 		<tools>
@@ -77,96 +79,191 @@
 		<modExtensions>
 			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
 				<def>MF_StandardMuzzleFalsh</def>
-				<drawSize>(0.7,0.7)</drawSize>
+				<drawSize>(0.5,0.5)</drawSize>
 				<offsets>
-					<li>(0.52,0.05)</li>
+					<li>(0.52,0.06)</li>
 				</offsets>
 			</li>
 		</modExtensions>
-		<generateCommonality>0.5</generateCommonality> <!-- Abundant -->
+		<generateCommonality>1.5</generateCommonality> <!-- Everywhere -->
 		<possessionCount>1</possessionCount> <!-- Possession -->
 		<thingSetMakerTags>
 			<li>CGF1_GunsGalore_RewardAncient_Common</li>
 		</thingSetMakerTags>
-	</ThingDef>
-	
-	<ThingDef ParentName="CGF1_MWP_AssaultRifle_Carbine_T1">
-		<defName>CGF1_MWP_M1_Carbine_PW_M8_</defName>
-		<label>M1 Carbine PW (M8)</label>
-		<description>Caliber: 22mm Rifle Grenade. Single-Shot.</description>
-		<graphicData>
-			<texPath>CGF1/Gun/UP/M1_Carbine_PW_M8</texPath>
-			<drawSize>1.00</drawSize>
-		</graphicData>
-		<recipeMaker>
-			<recipeUsers>
-				<li>CGF1_MWP_Building_Gunsmith</li>
-			</recipeUsers>
-			<researchPrerequisite>CGF1_MWP_Research_T7_WW2Firearms</researchPrerequisite>
-			<skillRequirements>
-				<Crafting>5</Crafting>
-			</skillRequirements>
-		</recipeMaker>
-		<costList>
-			<Steel>55</Steel>
-			<ComponentIndustrial>3</ComponentIndustrial>
-		</costList>
-		<statBases>
-			<WorkToMake>20000</WorkToMake>
-			<Mass>2.9</Mass>
-			<AccuracyTouch>0.65</AccuracyTouch>
-			<AccuracyShort>0.60</AccuracyShort>
-			<AccuracyMedium>0.55</AccuracyMedium>
-			<AccuracyLong>0.45</AccuracyLong>
-			<RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
-		</statBases>
-		<equippedAngleOffset>40</equippedAngleOffset>
-		<weaponTags Inherit="False"/>
-		<weaponClasses>
-			<li>RangedLight</li>
-		</weaponClasses>
-		<tradeTags Inherit="False">
-			<li>CGF1_GunsGalore_NoSpawn</li>
-		</tradeTags>
-		<verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>CGF1_MWP_Bullet_22mm_M17_RifleGrenade</defaultProjectile>
-				<forcedMissRadius>0.9</forcedMissRadius>
-				<warmupTime>3</warmupTime>
-				<ai_AvoidFriendlyFireRadius>2</ai_AvoidFriendlyFireRadius>
-				<range>25</range>
-				<soundCast>CGF1_MWP_SFX_GrenadeLauncher2</soundCast>
-				<soundCastTail>GunTail_Heavy</soundCastTail>
-				<onlyManualCast>true</onlyManualCast>
-				<targetParams>
-					<canTargetLocations>true</canTargetLocations>
-				</targetParams>
-				<muzzleFlashScale>14</muzzleFlashScale>
+		
+		<comps>
+			<li Class="WeaponVariants.CompProperties_WeaponVariants">
+				<generateBaseWeapon>true</generateBaseWeapon>
+				<variants>
+					<li>
+						<defName>CGF1_MWP_M1_Carbine_PW_Bayonet</defName>
+						<label>M1 Carbine PW (Bayonet)</label>
+						<description>Caliber: .30 Carbine. 15-round detachable mag. Semi-Automatic.\n\nThis variant has an attached M4 bayonet.</description>
+						<commonality>0.08</commonality> <!-- 1 in 12.5 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M1_Carbine_PW_Bayonet</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.1</Mass> <!-- M4 Bayonet -->
+						</statOffsets>
+						<replaceTools>true</replaceTools>
+						<tools>
+							<li>
+								<label>stock</label>
+								<capacities>
+									<li>Blunt</li>
+								</capacities>
+								<power>10</power>
+								<cooldownTime>2</cooldownTime>
+							</li>
+							<li>
+								<label>bayonet</label>
+								<capacities>
+									<li>Stab</li>
+								</capacities>
+								<power>13</power>
+								<cooldownTime>2</cooldownTime>
+							</li>
+						</tools>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>MF_StandardMuzzleFalsh</def>
+								<drawSize>(0.5,0.5)</drawSize>
+								<offsets>
+									<li>(0.45,0.07)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M1_Carbine_PW_SD</defName>
+						<label>M1 Carbine PW (SD)</label>
+						<description>Caliber: .30 Carbine. 15-round detachable mag. Semi-Automatic.\n\nThis variant has an attached suppressor.</description>
+						<commonality>0.04</commonality> <!-- 1 in 25 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M1_Carbine_PW_SD</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.2</Mass> <!-- Suppressor -->
+						</statOffsets>
+						<equippedStatOffsets>
+							<HuntingStealth>0.5</HuntingStealth> <!-- 0.5 for suppressors -->
+						</equippedStatOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
+								<muzzleFlashScale>-8</muzzleFlashScale>
+							</li>
+						</verbModifiers>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>CGF1_MF_StandardMuzzleFlashSD</def>
+								<drawSize>(0.3,0.3)</drawSize>
+								<offsets>
+									<li>(0.7,0.06)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M1_Carbine_PW_M8</defName>
+						<label>M1 Carbine PW (M8)</label>
+						<description>Caliber: 22mm Rifle Grenade. Single-shot.\n\nThis variant has an attached M8 rifle grenade projector.</description>
+						<commonality>0.04</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M1_Carbine_PW_M8</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.3</Mass> <!-- M8 Grenade Projector -->
+							<RangedWeapon_Cooldown>1.9</RangedWeapon_Cooldown> <!-- Rifle Grenade -->
+						</statOffsets>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_22mm_M17_RifleGrenade</defaultProjectile>
+								<forcedMissRadius>0.9</forcedMissRadius>
+								<warmupTime>3</warmupTime>
+								<ai_AvoidFriendlyFireRadius>2</ai_AvoidFriendlyFireRadius>
+								<range>25.9</range>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher2</soundCast>
+								<soundCastTail>GunTail_Heavy</soundCastTail>
+								<onlyManualCast>true</onlyManualCast>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<muzzleFlashScale>14</muzzleFlashScale>
+								<label>M8</label>
+								<commandIcon>CGF1/Gun/Variant/M1_Carbine_PW_M8</commandIcon>
+							</li>
+						</addedVerbs>
+						<removedVerbs>
+							<li>M1 Carbine</li>
+						</removedVerbs>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>CGF1_MF_StandardMuzzleFlashSD</def>
+								<drawSize>(0.3,0.3)</drawSize>
+								<offsets>
+									<li>(0.7,0.06)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M1_Carbine_PW_30Rnd</defName>
+						<label>M1 Carbine PW (30Rnd)</label>
+						<description>Caliber: .30 Carbine. 30-round detachable mag. Semi-Automatic.\n\nThis variant has a 30-round magazine.</description>
+						<commonality>0.25</commonality> <!-- 1 in 4 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M1_Carbine_PW_30Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.2</Mass> <!-- 30Rnd M1 Carbine Mag -->
+						</statOffsets>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M1_Carbine_PW_Weaver330</defName>
+						<label>M1 Carbine PW (Weaver 330)</label>
+						<description>Caliber: .30 Carbine. 15-round detachable mag. Semi-Automatic.\n\nThis variant has an attached Weaver 330 optic.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M1_Carbine_PW_Weaver330</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.2</Mass> <!-- Weaver 330 Scope -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M1_Carbine_PW_M84</defName>
+						<label>M1 Carbine PW (M84)</label>
+						<description>Caliber: .30 Carbine. 15-round detachable mag. Semi-Automatic.\n\nThis variant has an attached M84 scope.</description>
+						<commonality>0.04</commonality> <!-- 1 in 25 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M1_Carbine_PW_M84</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.3</Mass> <!-- M84 Scope -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>6</range>
+								<warmupTime>0.5</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+				</variants>
 			</li>
-		</verbs>
-		<tools>
-			<li>
-				<label>stock</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>10</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-			<li>
-				<label>barrel</label>
-				<capacities>
-					<li>Blunt</li>
-					<li>Poke</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-		</tools>
-		<generateCommonality>0.0125</generateCommonality> <!-- Rare -->
-		<thingSetMakerTags Inherit="False"/>
+		</comps>
 	</ThingDef>
 	
 </Defs>

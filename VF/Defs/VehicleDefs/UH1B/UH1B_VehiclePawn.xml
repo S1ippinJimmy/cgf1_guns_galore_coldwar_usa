@@ -121,7 +121,7 @@
 				<li>
 					<key>passenger</key>
 					<label>Passenger</label>
-					<slots>6</slots>
+					<slots>4</slots>
 					
 					<hitbox>
 						<cells>

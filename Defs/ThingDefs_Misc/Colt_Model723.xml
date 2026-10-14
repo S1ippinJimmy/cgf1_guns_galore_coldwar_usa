@@ -96,7 +96,6 @@
 						<commonality>0.1</commonality> <!-- 1 in 10 -->
 						<graphicData>
 							<texPath>CGF1/Gun/Variant/Colt_Model723_SD</texPath>
-							<drawSize>1.15</drawSize>
 						</graphicData>
 						<statOffsets>
 							<Mass>0.2</Mass> <!-- Suppressor -->

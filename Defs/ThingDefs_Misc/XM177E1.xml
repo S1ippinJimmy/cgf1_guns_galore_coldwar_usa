@@ -99,7 +99,6 @@
 						<commonality>0.1</commonality> <!-- 1 in 10 -->
 						<graphicData>
 							<texPath>CGF1/Gun/Variant/XM177E1_SD</texPath>
-							<drawSize>1.15</drawSize>
 						</graphicData>
 						<statOffsets>
 							<Mass>0.2</Mass> <!-- Suppressor -->
@@ -120,6 +119,38 @@
 								<drawSize>(0.3,0.3)</drawSize>
 								<offsets>
 									<li>(0.7,0.05)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_XM177E1_SionicsMAWA1</defName>
+						<label>XM177E1 (Sionics MAW-A1)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has an attached Sionics MAW-A1 suppressor.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/XM177E1_SionicsMAWA1</texPath>
+							<drawSize>1.15</drawSize>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.5</Mass> <!-- Sionics MAW-A1 Suppressor -->
+						</statOffsets>
+						<equippedStatOffsets>
+							<HuntingStealth>0.5</HuntingStealth> <!-- 0.5 for suppressors -->
+						</equippedStatOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
+								<muzzleFlashScale>-8</muzzleFlashScale>
+							</li>
+						</verbModifiers>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>CGF1_MF_StandardMuzzleFlashSD</def>
+								<drawSize>(0.3,0.3)</drawSize>
+								<offsets>
+									<li>(0.77,0.07)</li>
 								</offsets>
 							</li>
 						</modExtensions>
@@ -185,6 +216,40 @@
 								<warmupTime>0.15</warmupTime>
 							</li>
 						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_XM177E1_Scope_SionicsMAWA1</defName>
+						<label>XM177E1 (Scope Sionics MAW-A1)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has an attached Colt 3x20 scope and a Sionics MAW-A1 suppressor.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/XM177E1_Scope_SionicsMAWA1</texPath>
+							<drawSize>1.15</drawSize>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.6</Mass> <!-- Sionics MAW-A1 Suppressor (0.5) + Colt 3x20 (0.1) -->
+						</statOffsets>
+						<equippedStatOffsets>
+							<HuntingStealth>0.5</HuntingStealth> <!-- 0.5 for suppressors -->
+						</equippedStatOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
+								<muzzleFlashScale>-8</muzzleFlashScale>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+							</li>
+						</verbModifiers>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>CGF1_MF_StandardMuzzleFlashSD</def>
+								<drawSize>(0.3,0.3)</drawSize>
+								<offsets>
+									<li>(0.77,0.07)</li>
+								</offsets>
+							</li>
+						</modExtensions>
 					</li>
 				</variants>
 			</li>
